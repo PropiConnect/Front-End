@@ -1,0 +1,57 @@
+/* Estilo general del formulario */
+.login-form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 2em;
+  background-color: #ffffff; /* Fondo blanco */
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+/* Estilos para los campos del formulario */
+.form-field {
+  display: block;
+  width: 100%;
+  margin-bottom: 1em;
+}
+
+.mat-form-field {
+  background-color: #ffffff; /* Fondo blanco */
+  border: 1px solid #007bff; /* Contorno azul metálico */
+  border-radius: 4px; /* Bordes redondeados */
+}
+
+.mat-form-field.ng-dirty.ng-invalid {
+  border-color: #f44336; /* Contorno rojo para campos inválidos */
+}
+
+/* Estilos para los errores de validación */
+.mat-error {
+  color: #f44336; /* Rojo para el mensaje de error */
+}
+
+/* Estilos para los botones */
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1em;
+}
+
+.submit-button,
+.register-button {
+  font-size: 1.1em; /* Aumenta el tamaño del texto del botón */
+  padding: 0.75em 1.5em; /* Aumenta el tamaño del botón */
+  border-radius: 4px; /* Bordes redondeados */
+}
+
+.submit-button {
+  background-color: #007bff; /* Azul metálico */
+  color: #ffffff; /* Letras blancas */
+  border: none;
+}
+
+.register-button {
+  background-color: #000000; /* Negro */
+  color: #ffffff; /* Letras blancas */
+  border: none;
+}

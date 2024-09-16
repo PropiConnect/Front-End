@@ -1,0 +1,22 @@
+<form (ngSubmit)="onSubmit()" #loginForm="ngForm" class="login-form">
+  <mat-form-field class="form-field" appearance="outline">
+    <mat-label>Nombre de Usuario</mat-label>
+    <input matInput [(ngModel)]="username" name="username" required #usernameInput="ngModel">
+    <mat-error *ngIf="usernameInput.invalid && usernameInput.touched">
+      Nombre de usuario es obligatorio
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field class="form-field" appearance="outline">
+    <mat-label>Contraseña</mat-label>
+    <input matInput type="password" [(ngModel)]="password" name="password" required #passwordInput="ngModel">
+    <mat-error *ngIf="passwordInput.invalid && passwordInput.touched">
+      Contraseña es obligatoria
+    </mat-error>
+  </mat-form-field>
+
+  <div class="button-container">
+    <button mat-raised-button color="primary" type="submit" class="submit-button">Iniciar Sesión</button>
+    <button mat-raised-button type="button" class="register-button">Registrarse</button>
+  </div>
+</form>
