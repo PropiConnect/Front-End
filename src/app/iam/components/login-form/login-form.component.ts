@@ -1,15 +1,20 @@
+// After
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common'; // Add this import
 import { FormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatInputModule } from '@angular/material/input'; // Agrega esto si usas matInput
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
 
 @Component({
   selector: 'app-login-form',
   standalone: true,
   imports: [
+    CommonModule, // Add this module
     FormsModule,
     MatFormFieldModule,
-    MatInputModule // Asegúrate de incluir este módulo si usas matInput
+    MatInputModule,
+    MatButtonModule
   ],
   templateUrl: './login-form.component.html',
   styleUrls: ['./login-form.component.css']
