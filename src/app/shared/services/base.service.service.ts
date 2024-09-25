@@ -15,9 +15,9 @@ export class BaseServiceService<T>{
     })
   };
 
-  protected basePath: string = "https://my-json-server.typicode.com/PropiConnect/Json-placeholder/db";
+  protected basePath: string = "https://my-json-server.typicode.com/PropiConnect/Json-placeholder/";
 
-  protected resourceEndPoint: string = '/resources';
+  protected resourceEndPoint: string = '/db';
 
   protected resourcePath(): string {
     return `${this.basePath}${this.resourceEndPoint}`;
