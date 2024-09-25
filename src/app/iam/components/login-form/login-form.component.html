@@ -1,9 +1,13 @@
+<div class="welcome-message">
+  <h2>Bienvenidos</h2>
+</div>
+
 <form (ngSubmit)="onSubmit()" #loginForm="ngForm" class="login-form">
   <mat-form-field class="form-field" appearance="outline">
-    <mat-label>Nombre de Usuario</mat-label>
-    <input matInput [(ngModel)]="username" name="username" required #usernameInput="ngModel">
-    <mat-error *ngIf="usernameInput.invalid && usernameInput.touched">
-      Nombre de usuario es obligatorio
+    <mat-label>Correo electrónico</mat-label>
+    <input matInput [(ngModel)]="email" email="email" required #emailInput="ngModel">
+    <mat-error *ngIf="emailInput.invalid && emailInput.touched">
+      Correo del usuario es obligatorio
     </mat-error>
   </mat-form-field>
 
@@ -17,6 +21,7 @@
 
   <div class="button-container">
     <button mat-raised-button color="primary" type="submit" class="submit-button">Iniciar Sesión</button>
-    <button mat-raised-button type="button" class="register-button">Registrarse</button>
+    <button mat-button color="primary"  type="submit" class="submit-button" (click)="goToRegister()">Registrar</button>
   </div>
+
 </form>
