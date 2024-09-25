@@ -1,0 +1,48 @@
+<!-- registration-form.component.html -->
+<div class="registration-message">
+  <h2>Registrate</h2>
+</div>
+
+<form class="registration-form" (ngSubmit)="onSubmit()">
+  <mat-form-field appearance="fill" class="form-field">
+    <mat-label>Nombre</mat-label>
+    <input matInput [(ngModel)]="name" name="name" required />
+    <mat-error>Nombre es obligatorio.</mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill" class="form-field">
+    <mat-label>Teléfono</mat-label>
+    <input matInput [(ngModel)]="phone" name="phone" required />
+    <mat-error>Teléfono es obligatorio.</mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill" class="form-field">
+    <mat-label>Correo Electrónico</mat-label>
+    <input matInput [(ngModel)]="email" name="email" required />
+    <mat-error>Correo electrónico es obligatorio.</mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill" class="form-field">
+    <mat-label>Contraseña</mat-label>
+    <input matInput type="password" [(ngModel)]="password" name="password" required />
+    <mat-error>Contraseña es obligatoria.</mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill" class="form-field">
+    <mat-label>Dirección</mat-label>
+    <input matInput [(ngModel)]="address" name="address" required />
+    <mat-error>Dirección es obligatoria.</mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill" class="form-field">
+    <mat-label>Tipo de Suscripción</mat-label>
+    <mat-select name="subscriptionType"  required>
+      <mat-option value="Free">Gratuito</mat-option>
+      <mat-option value="Pro">Pro</mat-option>
+      <mat-option value="Enterprise">Enterprise</mat-option>
+    </mat-select>
+    <mat-error>Tipo de suscripción es obligatorio.</mat-error>
+  </mat-form-field>
+
+  <button type="submit" mat-raised-button color="primary">Registrar</button>
+</form>
