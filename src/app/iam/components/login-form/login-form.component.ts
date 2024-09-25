@@ -1,30 +1,39 @@
-// After
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common'; // Add this import
 import { FormsModule } from '@angular/forms';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatInputModule } from '@angular/material/input';
-import { MatButtonModule } from '@angular/material/button';
+import {MatFormField, MatFormFieldModule} from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input'; // Agrega esto si usas matInput
+import {Router} from "@angular/router";
+import {BrowserModule} from "@angular/platform-browser";
+import {NgIf} from "@angular/common";
+import {MatButton} from "@angular/material/button";
+
 
 @Component({
   selector: 'app-login-form',
   standalone: true,
   imports: [
-    CommonModule, // Add this module
     FormsModule,
-    MatFormFieldModule,
+    MatFormField,
     MatInputModule,
-    MatButtonModule
+    NgIf,
+    MatButton
+
   ],
   templateUrl: './login-form.component.html',
   styleUrls: ['./login-form.component.css']
 })
 export class LoginFormComponent {
-  username: string = '';
+  email: string = '';
   password: string = '';
 
+  constructor(private router: Router) {}
+
   onSubmit() {
-    console.log(this.username);
+    console.log(this.email);
     console.log(this.password);
   }
+  goToRegister() {
+    this.router.navigate(['/register']);
+  }
+
 }
