@@ -1,0 +1,99 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 40px;
+  gap: 20px;
+}
+
+.property-info-section {
+  flex: 1;
+}
+
+.property-details-card {
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.property-content {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.property-image {
+  width: 300px;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.property-details {
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+}
+
+.property-type {
+  font-size: 24px;
+  font-weight: bold;
+  color: #3f51b5;
+}
+
+.payment-form-section {
+  width: 40%;
+}
+
+.payment-form-card {
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.payment-card-icons {
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.payment-card-icons img {
+  width: 50px;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.half-width {
+  width: 48%;
+}
+
+.percentage-section {
+  display: flex;
+  justify-content: space-between;
+  gap: 4%;
+}
+
+.participant-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+}
+
+.remove-btn {
+  position: absolute;
+  right: -40px;
+  top: 10px;
+  margin-left: 10px;
+}
+
+.form-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.submit-btn {
+  background-color: #3f51b5;
+  color: white;
+}

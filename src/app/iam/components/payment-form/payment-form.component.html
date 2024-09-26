@@ -1,0 +1,71 @@
+<div class="container">
+  <!-- Sección de detalles de la propiedad -->
+  <div class="property-info-section">
+    <mat-card class="property-details-card">
+      <div class="property-content">
+        <img [src]="property?.image" alt="Property image" class="property-image">
+        <div class="property-details">
+          <h2 class="property-type">{{ property?.type }}</h2>
+          <p><strong>Precio:</strong> s/ {{ property?.initialPrice }}</p>
+          <p><strong>Tipo de vivienda:</strong> {{ property?.propertyType === 'House' ? 'Casa' : property?.propertyType }}</p>
+          <p><strong>Dirección:</strong> {{ property?.address }}</p>
+          <p><strong>Descripción:</strong> {{ property?.description }}</p>
+        </div>
+      </div>
+    </mat-card>
+  </div>
+
+  <!-- Sección de formulario de pago -->
+  <div class="payment-form-section">
+    <mat-card class="payment-form-card">
+      <div class="payment-card-icons">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Visa.svg" alt="Visa">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" alt="Mastercard">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/3/30/American_Express_logo.svg" alt="Amex">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a6/Diners_Club_Logo3.svg" alt="Diners">
+      </div>
+      <form [formGroup]="paymentForm" (ngSubmit)="onSubmit()">
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Número de tarjeta</mat-label>
+          <input matInput formControlName="cardNumber" placeholder="xxxx xxxx xxxx xxxx">
+        </mat-form-field>
+
+        <div formArrayName="participants">
+          <div *ngFor="let participant of participants.controls; let i = index" [formGroupName]="i" class="participant-section">
+            <mat-form-field appearance="outline" class="full-width">
+              <mat-label>Nombre de la persona {{ i + 1 }}</mat-label>
+              <input matInput formControlName="name">
+            </mat-form-field>
+
+            <div class="percentage-section">
+              <mat-form-field appearance="outline" class="half-width">
+                <mat-label>Porcentaje de pago</mat-label>
+                <input matInput type="number" formControlName="paymentPercentage">
+              </mat-form-field>
+
+              <mat-form-field appearance="outline" class="half-width">
+                <mat-label>Porcentaje de la propiedad</mat-label>
+                <input matInput type="number" formControlName="ownershipPercentage">
+              </mat-form-field>
+            </div>
+
+            <mat-form-field appearance="outline" class="full-width">
+              <mat-label>Correo de la persona {{ i + 1 }}</mat-label>
+              <input matInput formControlName="email">
+            </mat-form-field>
+
+            <!-- Botón de eliminar -->
+            <button mat-icon-button color="warn" (click)="removeParticipant(i)" *ngIf="participants.length > 1" class="remove-btn">
+              <mat-icon>remove_circle</mat-icon>
+            </button>
+          </div>
+        </div>
+
+        <div class="form-buttons">
+          <button mat-button color="primary" type="button" (click)="addParticipant()">Añadir persona</button>
+          <button mat-raised-button color="primary" type="submit" class="submit-btn">Realizar pago</button>
+        </div>
+      </form>
+    </mat-card>
+  </div>
+</div>
