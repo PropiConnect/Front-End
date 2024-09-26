@@ -3,7 +3,7 @@ import { RouterOutlet } from '@angular/router';
 
 import {RegistrationFormComponent} from "./iam/components/registration-form/registration-form.component";
 import {LoginFormComponent} from "./iam/components/login-form/login-form.component";
-import {PaymentFormComponent} from "./iam/components/payment-form/payment-form.component";
+import {PaymentFormComponent} from "./payments/components/payment-form/payment-form.component";
 
 @Component({
   selector: 'app-root',

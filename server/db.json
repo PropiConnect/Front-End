@@ -1,0 +1,62 @@
+{
+  "properties": [
+    {
+      "id": 1,
+      "owner": "John Doe",
+      "ownerId": 1,
+      "city": "Lima",
+      "type": "Venta",
+      "address": "Av. Maria de los angeles 487",
+      "description": "Propiedad de 3 habitaciones y 2 baños, con cocina moderna y sala amplia y luminosa. Cuenta con un patio trasero ideal para relajarse o hacer reuniones al aire libre. Está ubicada en una zona residencial tranquila, cercana a escuelas, parques y centros comerciales, con estacionamiento para dos autos.",
+      "propertyType": "House",
+      "rentalType": "Monthly",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRghHd-_nVpOvguCyPLA9f5TKta0_xbTEoAQA&s",
+      "initialPrice": 3500
+    },
+    {
+      "id": 2,
+      "owner": "Jane Smith",
+      "ownerId": 2,
+      "city": "Cusco",
+      "type": "Alquiler",
+      "address": "Jr. San Martín 258",
+      "description": "Charming 4-bedroom house with 3 bathrooms, a spacious living room, and a modern kitchen. The property includes a private garden and a garage for one car. Located in a quiet residential area, near local markets, schools, and public transportation.",
+      "propertyType": "House",
+      "rentalType": "Yearly",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuPqP_wovCNhRkAe3-HLtlvwmBNvlS9xU1aA&s",
+      "initialPrice": 2500
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "name": "John Doe",
+      "phone": 348927483,
+      "email": "example@gmail.com",
+      "password": "123456",
+      "subscriptionType": "Free",
+      "address": "Av. Cuba 777"
+    },
+    {
+      "id": 2,
+      "name": "Jorge Luis Guevara Roca",
+      "phone": 385349349,
+      "email": "jorge_g_r@gmail.com",
+      "password": "123456",
+      "subscriptionType": "Free",
+      "address": "Av. Maria de los angeles 487"
+    }
+  ],
+  "payments": [
+    {
+      "id": 1,
+      "cardNumber": 123456789,
+      "participant1Name": "John Doe",
+      "participantEmail1": "example@gmail.com",
+      "participant2Name": "Jane Smith",
+      "participantEmail2": "example2@gmail.com",
+      "particitant3Name": "Jorge Luis Guevara Roca",
+      "particitant3Email": "jorge_g_r@gmail.com"
+    }
+  ]
+}
