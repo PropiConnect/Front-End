@@ -50,13 +50,81 @@
   "payments": [
     {
       "id": 1,
-      "cardNumber": 123456789,
-      "participant1Name": "John Doe",
-      "participantEmail1": "example@gmail.com",
-      "participant2Name": "Jane Smith",
-      "participantEmail2": "example2@gmail.com",
-      "particitant3Name": "Jorge Luis Guevara Roca",
-      "particitant3Email": "jorge_g_r@gmail.com"
+      "cardNumber": "2132342342343334",
+      "participants": [
+        {
+          "name": "2SAD",
+          "email": "Prueba@example.com",
+          "paymentPercentage": 12,
+          "ownershipPercentage": 12
+        },
+        {
+          "name": "JorgeLuna",
+          "email": "Prueba@example.com",
+          "paymentPercentage": 12,
+          "ownershipPercentage": 12
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "cardNumber": "9876543210123456",
+      "participants": [
+        {
+          "name": "AliceWonder",
+          "email": "alice@example.com",
+          "paymentPercentage": 25,
+          "ownershipPercentage": 20
+        },
+        {
+          "name": "BobBuilder",
+          "email": "bob@example.com",
+          "paymentPercentage": 25,
+          "ownershipPercentage": 30
+        },
+        {
+          "name": "CharlieChoco",
+          "email": "charlie@example.com",
+          "paymentPercentage": 50,
+          "ownershipPercentage": 50
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "cardNumber": "1111222233334444",
+      "participants": [
+        {
+          "name": "DanaDancer",
+          "email": "dana@example.com",
+          "paymentPercentage": 40,
+          "ownershipPercentage": 40
+        },
+        {
+          "name": "EliExplorer",
+          "email": "eli@example.com",
+          "paymentPercentage": 60,
+          "ownershipPercentage": 60
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "cardNumber": "5555666677778888",
+      "participants": [
+        {
+          "name": "FrankFighter",
+          "email": "frank@example.com",
+          "paymentPercentage": 30,
+          "ownershipPercentage": 20
+        },
+        {
+          "name": "GraceGamer",
+          "email": "grace@example.com",
+          "paymentPercentage": 70,
+          "ownershipPercentage": 80
+        }
+      ]
     }
   ]
 }

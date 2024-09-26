@@ -94,7 +94,7 @@ export class PaymentFormComponent implements OnInit {
       console.log(this.paymentForm.value);
 
       // Simular el envío de los datos
-      this.http.post('https://my-json-server.typicode.com/PropiConnect/Json-placeholder/payments', this.paymentForm.value)
+      this.http.post('http://localhost:3000/api/v1/payments', this.paymentForm.value)
           .subscribe({
             next: (response) => {
               console.log('Pago registrado con éxito', response);
