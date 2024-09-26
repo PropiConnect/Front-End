@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+.property-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px;
+  margin-top: 90px;
+;
+}
+
+.property-image {
+  flex: 0.5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.property-image img {
+  width: 60%;
+  border-radius: 15px;
+}
+
+.property-info {
+  flex: 0.5;
+  display: flex;
+  flex-direction: column;
+}
+
+.info-columns {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  margin-top: 20px;
+}
+
+.left-column, .right-column {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.right-column {
+  margin-right: 20px;
+}
+
+.custom-card-content {
+  box-sizing: border-box;
+  background-color: #ffffff;
+  padding: 15px;
+  border-radius: 5px;
+  border: 1px solid #B6B8B6;
+  margin-bottom: 0.25px;
+}
+
+.property-field {
+  margin-bottom: 15px;
+}
+
+.property-field label {
+  font-weight: bold;
+  color:#B6B8B6
+}
+
+.buttons {
+  margin-top: 20px;
+  text-align: center;
+}
+
+h1 {
+  color: #007BFF;
+  text-align: start;
+  font-family: inter, sans-serif;
+  font-weight: 850;
+}
+

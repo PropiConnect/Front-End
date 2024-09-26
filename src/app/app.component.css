@@ -1,0 +1,30 @@
+.toolbar {
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  z-index: 20;
+  position: relative;
+
+
+  a {
+    color: #fff;
+    text-transform: none;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .mat-icon {
+    font-size: 24px;
+  }
+
+  .spacer {
+    flex-grow: 1;
+  }
+
+  button {
+    margin-left: 16px;
+  }
+}

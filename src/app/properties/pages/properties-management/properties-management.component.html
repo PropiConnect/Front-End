@@ -1,0 +1,57 @@
+<div class="property-container">
+  <div class="property-image">
+    <img [src]="propertyData.image" alt="Property Image" class="image" />
+  </div>
+
+  <div class="property-info">
+    <h1>Property Information</h1>
+
+    <div class="info-columns">
+      <div class="left-column">
+        <mat-card-content class="custom-card-content">
+          <div class="property-field">
+            <label>City</label>
+            <p>{{ propertyData.city }}</p>
+          </div>
+        </mat-card-content>
+
+        <mat-card-content class="custom-card-content">
+          <div class="property-field">
+            <label>Address</label>
+            <p>{{ propertyData.address }}</p>
+          </div>
+        </mat-card-content>
+
+        <mat-card-content class="custom-card-content">
+          <div class="property-field">
+            <label>Property Type</label>
+            <p>{{ propertyData.propertyType }}</p>
+          </div>
+        </mat-card-content>
+
+        <mat-card-content class="custom-card-content">
+          <div class="property-field">
+            <label>Description</label>
+            <p>{{ propertyData.description }}</p>
+          </div>
+        </mat-card-content>
+      </div>
+
+      <div class="right-column">
+        <mat-card-content class="custom-card-content">
+          <div class="property-field">
+            <label>Price</label>
+            <p>{{ propertyData.initialPrice | currency:'USD' }}</p>
+          </div>
+        </mat-card-content>
+
+        <mat-card-content class="custom-card-content">
+          <div class="property-field">
+            <label>Rental Type</label>
+            <p>{{ propertyData.rentalType }}</p>
+          </div>
+        </mat-card-content>
+      </div>
+    </div>
+  </div>
+</div>

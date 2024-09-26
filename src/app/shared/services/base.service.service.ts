@@ -15,7 +15,7 @@ export class BaseServiceService<T>{
     })
   };
 
-  protected basePath: string = "https://my-json-server.typicode.com/PropiConnect/Json-placeholder/";
+  protected basePath: string = "https://my-json-server.typicode.com/PropiConnect/Json-placeholder";
 
   protected resourceEndPoint: string = '/db';
 
@@ -33,7 +33,7 @@ export class BaseServiceService<T>{
   }
 
   public getAll(): Observable<Array<T>> {
-    return this.http.get<Array<T>>(this.resourcePath(), this.httpOptions)
+    return this.http.get<Array<T>>(this.resourcePath())
       .pipe(retry(2), catchError(this.handleError));
   }
 
@@ -51,4 +51,6 @@ export class BaseServiceService<T>{
     return this.http.put<T>(`${this.resourcePath()}/${id}`, JSON.stringify(item), this.httpOptions)
       .pipe(retry(2), catchError(this.handleError));
   }
+
+
 }
