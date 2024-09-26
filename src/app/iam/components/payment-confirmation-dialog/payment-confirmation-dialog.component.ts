@@ -8,7 +8,7 @@ import { MatButtonModule } from '@angular/material/button';
   template: `
     <div class="dialog-container">
       <div class="icon-container">
-        <img src="assets/success-icon.png" alt="Success Icon" class="success-icon">
+        
       </div>
       <h2>Pago realizado con éxito</h2>
       <button mat-raised-button color="primary" (click)="closeDialog()">Continuar</button>
