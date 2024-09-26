@@ -5,44 +5,44 @@
 
 <form class="registration-form" (ngSubmit)="onSubmit()">
   <mat-form-field appearance="fill" class="form-field">
-    <mat-label>Nombre</mat-label>
+    <mat-label>Name</mat-label>
     <input matInput [(ngModel)]="name" name="name" required />
-    <mat-error>Nombre es obligatorio.</mat-error>
+    <mat-error>Name is needed.</mat-error>
   </mat-form-field>
 
   <mat-form-field appearance="fill" class="form-field">
-    <mat-label>Teléfono</mat-label>
+    <mat-label>Phone</mat-label>
     <input matInput [(ngModel)]="phone" name="phone" required />
-    <mat-error>Teléfono es obligatorio.</mat-error>
+    <mat-error>Phone is needed.</mat-error>
   </mat-form-field>
 
   <mat-form-field appearance="fill" class="form-field">
-    <mat-label>Correo Electrónico</mat-label>
+    <mat-label>Email</mat-label>
     <input matInput [(ngModel)]="email" name="email" required />
-    <mat-error>Correo electrónico es obligatorio.</mat-error>
+    <mat-error>Email is needed.</mat-error>
   </mat-form-field>
 
   <mat-form-field appearance="fill" class="form-field">
-    <mat-label>Contraseña</mat-label>
+    <mat-label>Password</mat-label>
     <input matInput type="password" [(ngModel)]="password" name="password" required />
-    <mat-error>Contraseña es obligatoria.</mat-error>
+    <mat-error>Password is needed.</mat-error>
   </mat-form-field>
 
   <mat-form-field appearance="fill" class="form-field">
-    <mat-label>Dirección</mat-label>
+    <mat-label>Address</mat-label>
     <input matInput [(ngModel)]="address" name="address" required />
-    <mat-error>Dirección es obligatoria.</mat-error>
+    <mat-error>Address is needed.</mat-error>
   </mat-form-field>
 
   <mat-form-field appearance="fill" class="form-field">
-    <mat-label>Tipo de Suscripción</mat-label>
+    <mat-label>Subscription Type</mat-label>
     <mat-select name="subscriptionType"  required>
-      <mat-option value="Free">Gratuito</mat-option>
+      <mat-option value="Free">Free</mat-option>
       <mat-option value="Pro">Pro</mat-option>
       <mat-option value="Enterprise">Enterprise</mat-option>
     </mat-select>
     <mat-error>Tipo de suscripción es obligatorio.</mat-error>
   </mat-form-field>
 
-  <button type="submit" mat-raised-button color="primary">Registrar</button>
+  <button type="submit" mat-raised-button color="primary">Register</button>
 </form>
