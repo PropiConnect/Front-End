@@ -1,11 +1,11 @@
-import { Component } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { MatFormField, MatFormFieldModule } from '@angular/material/form-field';
-import { MatInputModule } from '@angular/material/input';
-import { Router } from "@angular/router";
-import { NgIf } from "@angular/common";
-import { MatButton } from "@angular/material/button";
-import { UserService } from "../../services/user.service";
+import {Component} from '@angular/core';
+import {FormsModule} from '@angular/forms';
+import {MatFormField} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+import {Router} from "@angular/router";
+import {NgIf} from "@angular/common";
+import {MatButton} from "@angular/material/button";
+import {UserService} from "../../services/user.service";
 
 @Component({
   selector: 'app-login-form',

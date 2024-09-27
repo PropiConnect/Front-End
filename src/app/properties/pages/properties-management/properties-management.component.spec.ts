@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { PropertiesManagementComponent } from './properties-management.component';
+import {PropertiesManagementComponent} from './properties-management.component';
 
 describe('PropertiesManagementComponent', () => {
   let component: PropertiesManagementComponent;

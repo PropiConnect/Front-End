@@ -1,4 +1,4 @@
-import { Properties } from './properties.entity';
+import {Properties} from './properties.entity';
 
 describe('Properties', () => {
   it('should create an instance', () => {

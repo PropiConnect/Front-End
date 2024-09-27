@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 import {BaseServiceService} from "../../shared/services/base.service.service";
 import {Properties} from "../model/properties.entity";
 

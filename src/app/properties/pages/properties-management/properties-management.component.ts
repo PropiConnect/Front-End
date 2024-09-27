@@ -1,15 +1,12 @@
-import {AfterViewInit, Component, inject, OnInit, ViewChild} from '@angular/core';
+import {Component, inject, OnInit} from '@angular/core';
 import {Properties} from "../../model/properties.entity";
 import {PropertiesService} from "../../services/properties.service";
 import {MatTableDataSource} from "@angular/material/table";
-import {MatPaginator} from "@angular/material/paginator";
-import {MatSort} from "@angular/material/sort";
 import {FormsModule} from "@angular/forms";
 import {CurrencyPipe} from "@angular/common";
 import {MatDivider} from "@angular/material/divider";
 import {MatCard, MatCardContent} from "@angular/material/card";
 import {HttpClient} from "@angular/common/http";
-
 
 
 @Component({
@@ -54,7 +51,7 @@ export class PropertiesManagementComponent implements OnInit {
 
   //#region CRUD
   private getAllProperties() {
-    this.http.get<any>('https://my-json-server.typicode.com/PropiConnect/Json-placeholder/properties/1').subscribe(
+    this.http.get<any>('https://my-json-server.typicode.com/PropiConnect/Json-placeholder/properties/').subscribe(
       data => {
         this.property = data;
       },

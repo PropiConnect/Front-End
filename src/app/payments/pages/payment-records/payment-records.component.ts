@@ -1,13 +1,13 @@
-import { Component, inject, OnInit, ViewChild } from '@angular/core';
-import { PaymentService } from '../../services/payment.service';
-import { Payment } from '../../model/payment.entity';
-import { MatSort } from '@angular/material/sort';
-import { MatPaginator } from '@angular/material/paginator';
-import { HttpClientModule } from '@angular/common/http';
+import {Component, inject, OnInit, ViewChild} from '@angular/core';
+import {PaymentService} from '../../services/payment.service';
+import {Payment} from '../../model/payment.entity';
+import {MatSort} from '@angular/material/sort';
+import {MatPaginator} from '@angular/material/paginator';
+import {HttpClientModule} from '@angular/common/http';
 import {MatTableDataSource, MatTableModule} from '@angular/material/table';
 import {MatCard, MatCardSubtitle, MatCardTitle} from "@angular/material/card";
 import {MatToolbar} from "@angular/material/toolbar"; // Import MatTableModule
-import { CommonModule } from '@angular/common'; // Import CommonModule
+import {CommonModule} from '@angular/common'; // Import CommonModule
 @Component({
   selector: 'app-payment-records',
   standalone: true,

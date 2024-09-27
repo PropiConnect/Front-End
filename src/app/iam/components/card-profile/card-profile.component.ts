@@ -1,8 +1,8 @@
-import { Component, OnInit } from '@angular/core';
-import { User } from "../../models/user.model";
-import { ActivatedRoute } from "@angular/router";
-import { UserService } from "../../services/user.service";
-import { NgIf } from "@angular/common";
+import {Component, OnInit} from '@angular/core';
+import {User} from "../../models/user.model";
+import {ActivatedRoute} from "@angular/router";
+import {UserService} from "../../services/user.service";
+import {NgIf} from "@angular/common";
 
 @Component({
   selector: 'app-card-profile',

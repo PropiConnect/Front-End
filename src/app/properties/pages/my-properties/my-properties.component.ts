@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {Component} from '@angular/core';
 import {HttpClient, HttpClientModule} from '@angular/common/http';
-import { Router } from '@angular/router';
-import { Properties } from '../../model/properties.entity';
+import {Router} from '@angular/router';
+import {Properties} from '../../model/properties.entity';
 import {CommonModule} from "@angular/common";
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatInputModule} from "@angular/material/input";

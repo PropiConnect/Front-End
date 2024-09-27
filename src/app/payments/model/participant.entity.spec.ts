@@ -1,4 +1,4 @@
-import { Participant } from './participant.entity';
+import {Participant} from './participant.entity';
 
 describe('ParticipantEntity', () => {
   it('should create an instance', () => {

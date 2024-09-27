@@ -1,11 +1,11 @@
-import { Component } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { MatFormFieldModule } from "@angular/material/form-field";
-import { MatInputModule } from "@angular/material/input";
-import { User } from "../../models/user.model";
-import { UserService } from "../../services/user.service";
-import { MatOption, MatSelect } from "@angular/material/select";
-import { Router } from "@angular/router";
+import {Component} from '@angular/core';
+import {FormsModule} from '@angular/forms';
+import {MatFormFieldModule} from "@angular/material/form-field";
+import {MatInputModule} from "@angular/material/input";
+import {User} from "../../models/user.model";
+import {UserService} from "../../services/user.service";
+import {MatOption, MatSelect} from "@angular/material/select";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-registration-form',
