@@ -1,29 +1,29 @@
-<div class="container">
 <div class="welcome-message">
-  <h2>Bienvenidos</h2>
+  <h2>Welcome</h2>
 </div>
 
 <form (ngSubmit)="onSubmit()" #loginForm="ngForm" class="login-form">
   <mat-form-field class="form-field" appearance="outline">
-    <mat-label>Correo electrónico</mat-label>
+    <mat-label>Email</mat-label>
     <input matInput [(ngModel)]="email" email="email" required #emailInput="ngModel">
     <mat-error *ngIf="emailInput.invalid && emailInput.touched">
-      Correo del usuario es obligatorio
+      Email is required
     </mat-error>
   </mat-form-field>
 
   <mat-form-field class="form-field" appearance="outline">
-    <mat-label>Contraseña</mat-label>
+    <mat-label>Password</mat-label>
     <input matInput type="password" [(ngModel)]="password" name="password" required #passwordInput="ngModel">
     <mat-error *ngIf="passwordInput.invalid && passwordInput.touched">
-      Contraseña es obligatoria
+      Password is required
     </mat-error>
   </mat-form-field>
 
   <div class="button-container">
-    <button mat-raised-button color="primary" type="submit" class="submit-button">Iniciar Sesión</button>
-    <button mat-button color="primary"  type="submit" class="submit-button" (click)="goToRegister()">Registrar</button>
+    <button mat-raised-button color="primary" type="submit" class="submit-button">Login</button>
+    <button mat-button color="primary" type="button" class="submit-button" (click)="goToRegister()">Register</button>
   </div>
 
+  <!-- Error message -->
+  <p *ngIf="errorMessage" class="error-message">{{ errorMessage }}</p>
 </form>
-</div>

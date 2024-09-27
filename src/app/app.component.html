@@ -1,23 +1,19 @@
 <mat-toolbar class="toolbar">
   <a mat-button [routerLink]="'/'" class="nav-link">
     <mat-icon>home</mat-icon>
-    <span>Inicio</span>
-  </a>
-  <a mat-button [routerLink]="'/services'" class="nav-link">
-    <mat-icon>restaurant_menu</mat-icon>
-    <span>Servicios</span>
-  </a>
-  <a mat-button [routerLink]="'/equipment'" class="nav-link">
-    <mat-icon>build</mat-icon>
-    <span>Equipos</span>
+    <span>Home</span>
   </a>
   <a mat-button [routerLink]="'/payment'" class="nav-link">
     <mat-icon>event_note</mat-icon>
     <span>Payment</span>
   </a>
   <a mat-button [routerLink]="'/properties'" class="nav-link">
-    <mat-icon>chat</mat-icon>
+    <mat-icon>location_on</mat-icon>
     <span>Properties</span>
+  </a>
+  <a mat-button [routerLink]="'/owner/payments'" class="nav-link">
+    <mat-icon>description</mat-icon>
+    <span>Payment Record</span>
   </a>
 
   <span class="spacer"></span>
@@ -26,7 +22,7 @@
     <mat-icon>search</mat-icon>
   </a>
 
-  <button mat-raised-button color="accent" [routerLink]="'/account'">Mi cuenta</button>
+  <button mat-raised-button color="accent" [routerLink]="'/profile/1'">My Account</button>
 
 </mat-toolbar>
 

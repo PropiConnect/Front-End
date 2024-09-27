@@ -1,0 +1,17 @@
+<div *ngIf="user; else loading">
+  <div class="profile-container">
+    <h1>User Profile</h1>
+    <div class="profile-details">
+      <p><strong>ID:</strong> {{ user.id }}</p>
+      <p><strong>Name:</strong> {{ user.name }}</p>
+      <p><strong>Email:</strong> {{ user.email }}</p>
+      <p><strong>Phone:</strong> {{ user.phone }}</p>
+      <p><strong>Address:</strong> {{ user.address }}</p>
+      <p><strong>Subscription Type:</strong> {{ user.subscriptionType || 'N/A' }}</p>
+    </div>
+  </div>
+</div>
+
+<ng-template #loading>
+  <p>Loading Profile...</p>
+</ng-template>

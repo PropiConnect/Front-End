@@ -1,0 +1,49 @@
+/* Contenedor principal del perfil */
+.profile-container {
+  max-width: 600px;
+  margin: 2em auto;
+  padding: 2em;
+  border: 1px solid rgba(0, 0, 0, 0.1); /* Borde sutil */
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* Sombra suave */
+  background-color: transparent; /* Sin fondo */
+}
+
+/* Título principal */
+.profile-container h1 {
+  font-size: 2em;
+  text-align: center;
+  margin-bottom: 1.5em;
+  color: #333;
+  font-weight: 600; /* Negrita más moderada */
+}
+
+/* Detalles del perfil */
+.profile-details p {
+  font-size: 1.1em;
+  color: #555; /* Texto más suave */
+  margin-bottom: 1em;
+  line-height: 1.6;
+}
+
+/* Estilo de los textos en negrita */
+.profile-details strong {
+  color: #007bff; /* Color de acento azul metálico */
+}
+
+/* Estilo de carga */
+p {
+  text-align: center;
+  color: #007bff; /* Azul metálico */
+  font-size: 1.2em;
+}
+
+/* Agregar un efecto de transición suave al contenedor */
+.profile-container {
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Añadir un pequeño efecto al pasar el cursor por encima del contenedor */
+.profile-container:hover {
+  transform: scale(1.02);
+}

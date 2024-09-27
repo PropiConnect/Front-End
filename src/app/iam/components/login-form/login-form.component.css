@@ -1,5 +1,4 @@
 /* Estilo general del formulario */
-
 .login-form {
   max-width: 400px; /* Ancho máximo */
   margin: 2em auto; /* Centrado vertical y horizontal */
@@ -70,3 +69,11 @@ button[type="submit"]:hover {
 .register-button:hover {
   background-color: #333333; /* Color más claro al pasar el ratón */
 }
+
+.error-message {
+  color: red; /* Cambia el color del texto a rojo */
+  margin-top: 10px; /* Espaciado arriba del mensaje */
+  font-weight: bold; /* Puedes hacer que el texto sea negrita */
+}
+
+
