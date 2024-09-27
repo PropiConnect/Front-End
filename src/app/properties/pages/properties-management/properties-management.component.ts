@@ -8,6 +8,8 @@ import {FormsModule} from "@angular/forms";
 import {CurrencyPipe} from "@angular/common";
 import {MatDivider} from "@angular/material/divider";
 import {MatCard, MatCardContent} from "@angular/material/card";
+import {HttpClient} from "@angular/common/http";
+
 
 
 @Component({
@@ -31,15 +33,17 @@ export class PropertiesManagementComponent implements OnInit {
   protected dataSource!: MatTableDataSource<any>;
   private propertyService: PropertiesService = inject(PropertiesService);
   property: any;
+
   //#endregion
 
   //#region Methods
 
   //#region begin
-  constructor() {
+  constructor(private http: HttpClient) {
     this.editMode = false;
     this.propertyData = new Properties({});
     this.dataSource = new MatTableDataSource();
+
   }
 
   ngOnInit():void {
