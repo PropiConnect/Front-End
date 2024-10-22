@@ -1,0 +1,19 @@
+<h1 class="section-name">Propiedades </h1>
+<div class="container">
+  <!-- Contenedor para las propiedades del usuario -->
+  <div class="property-info-section" *ngFor="let property of userProperties">
+    <mat-card class="property-details-card">
+      <div class="property-content">
+        <img [src]="property.image" alt="Property image" class="property-image">
+        <div class="property-details">
+          <h2 class="property-type">{{ property.type }}</h2>
+          <p><strong>Precio:</strong> s/ {{ property.initialPrice }}</p>
+          <p><strong>Tipo de vivienda:</strong> {{ property.propertyType === 'House' ? 'Casa' : property.propertyType }}</p>
+          <p><strong>Dirección:</strong> {{ property.address }}</p>
+          <p><strong>Descripción:</strong> {{ property.description }}</p>
+        </div>
+      </div>
+
+    </mat-card>
+  </div>
+</div>

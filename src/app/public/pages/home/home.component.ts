@@ -1,7 +1,7 @@
 import {Component} from '@angular/core';
 import {HttpClient, HttpClientModule} from '@angular/common/http';
 import {Router} from '@angular/router';
-import {Properties} from '../../model/properties.entity';
+import {Properties} from '../../../properties/model/properties.entity';
 import {CommonModule} from "@angular/common";
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatInputModule} from "@angular/material/input";
@@ -27,10 +27,10 @@ import {MatDialogModule} from "@angular/material/dialog"; // Asegúrate de ajust
     ReactiveFormsModule,
     MatDialogModule // Asegurarse de importar MatDialogModule aquí
   ],
-  templateUrl: './my-properties.component.html',
-  styleUrl: './my-properties.component.css'
+  templateUrl: 'home.component.html',
+  styleUrl: 'home.component.css'
 })
-export class MyPropertiesComponent {
+export class HomeComponent {
   userProperties: Properties[] = [];
   userId: number = 1; // Asumimos que el ID del usuario es 1, cámbialo por la lógica de autenticación que uses
 
@@ -42,7 +42,7 @@ export class MyPropertiesComponent {
 
   // Cargar las propiedades del usuario
   loadUserProperties(): void {
-    this.http.get<Properties[]>(`https://my-json-server.typicode.com/PropiConnect/Json-placeholder/properties?ownerId=${this.userId}`)
+    this.http.get<Properties[]>(`https://my-json-server.typicode.com/PropiConnect/Json-placeholder/properties`)
       .subscribe(
         data => {
           this.userProperties = data;
@@ -53,13 +53,5 @@ export class MyPropertiesComponent {
       );
   }
 
-  // Redirigir a la página de edición de propiedades
-  editProperty(propertyId: number): void {
-    this.router.navigate(['/properties-managment'], { queryParams: { id: propertyId } });
-  }
 
-  // Redirigir a la página para añadir una nueva propiedad
-  addProperty(): void {
-    this.router.navigate(['/create-properties-management']);
-  }
 }

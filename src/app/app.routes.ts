@@ -7,16 +7,19 @@ import {CardProfileComponent} from "./iam/components/card-profile/card-profile.c
 import {MyPropertiesComponent} from "./properties/pages/my-properties/my-properties.component";
 import {PropertiesManagementComponent} from "./properties/pages/properties-management/properties-management.component"
 import {CreatePropertiesComponent} from "./properties/pages/create-properties/create-properties.component";
+import {HomeComponent} from "./public/pages/home/home.component";
 
 export const routes: Routes = [
-  { path: '', redirectTo: '/login', pathMatch: 'full' },
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
 
   { path: 'register', component: RegistrationPageComponent },
   { path: 'login', component: LoginPageComponent },
-  { path: 'payment', component: PaymentFormComponent },
-  { path: 'properties', component: MyPropertiesComponent },
-  { path: 'owner/payments', component: PaymentRecordsComponent },
   { path: 'profile/:id', component: CardProfileComponent },
+  { path: 'home', component: HomeComponent } ,
+  { path: 'payment', component: PaymentFormComponent },
+  { path: 'owner/payments', component: PaymentRecordsComponent },
+
+  { path: 'properties', component: MyPropertiesComponent },
   { path: 'all-properties', component: PropertiesManagementComponent},
-  { path: 'create-properties', component: CreatePropertiesComponent }
+  { path: 'create-properties-management', component: CreatePropertiesComponent }
 ];
