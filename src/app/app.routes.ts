@@ -10,7 +10,7 @@ import {CreatePropertiesComponent} from "./properties/pages/create-properties/cr
 import {HomeComponent} from "./public/pages/home/home.component";
 
 export const routes: Routes = [
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: '', redirectTo: '/register', pathMatch: 'full' },
 
   { path: 'register', component: RegistrationPageComponent },
   { path: 'login', component: LoginPageComponent },

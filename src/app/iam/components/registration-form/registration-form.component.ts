@@ -5,18 +5,23 @@ import {MatInputModule} from "@angular/material/input";
 import {User} from "../../models/user.model";
 import {UserService} from "../../services/user.service";
 import {MatOption, MatSelect} from "@angular/material/select";
-import {Router} from "@angular/router";
+import {Router, RouterLink} from "@angular/router";
+import {MatAnchor} from "@angular/material/button";
+import {MatIcon} from "@angular/material/icon";
 
 @Component({
   selector: 'app-registration-form',
   standalone: true,
-  imports: [
-    FormsModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatSelect,
-    MatOption
-  ],
+    imports: [
+        FormsModule,
+        MatFormFieldModule,
+        MatInputModule,
+        MatSelect,
+        MatOption,
+        MatAnchor,
+        MatIcon,
+        RouterLink
+    ],
   templateUrl: './registration-form.component.html',
   styleUrls: ['./registration-form.component.css']
 })
