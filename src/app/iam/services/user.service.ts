@@ -5,7 +5,7 @@ import {User} from '../models/user.model';
   providedIn: 'root'
 })
 export class UserService {
-  private apiUrl = 'https://my-json-server.typicode.com/PropiConnect/Json-placeholder/users'; // URL de la API simulada
+  private apiUrl = 'https://inmoshare-api-production.up.railway.app/api/v1/users'; // URL de la API simulada
 
   constructor() {}
 

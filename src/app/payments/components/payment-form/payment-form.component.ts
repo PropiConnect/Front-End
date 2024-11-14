@@ -72,7 +72,7 @@ export class PaymentFormComponent implements OnInit {
 
   loadProperty(): void {
     // Aquí haces la llamada al API para obtener la información de la propiedad
-    this.http.get<any>('https://my-json-server.typicode.com/PropiConnect/Json-placeholder/properties/1').subscribe(
+    this.http.get<any>('https://inmoshare-api-production.up.railway.app/api/v1/payments/1').subscribe(
         data => {
           this.property = data;
         },

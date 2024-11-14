@@ -15,9 +15,9 @@ export class BaseServiceService<T>{
     })
   };
 
-  protected basePath: string = "https://my-json-server.typicode.com/PropiConnect/Json-placeholder";
+  protected basePath: string = "https://inmoshare-api-production.up.railway.app/api/v1";
 
-  protected resourceEndPoint: string = '/db';
+  protected resourceEndPoint: string = '';
 
   protected resourcePath(): string {
     return `${this.basePath}${this.resourceEndPoint}`;

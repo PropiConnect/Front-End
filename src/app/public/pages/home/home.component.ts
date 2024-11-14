@@ -42,7 +42,7 @@ export class HomeComponent {
 
   // Cargar las propiedades del usuario
   loadUserProperties(): void {
-    this.http.get<Properties[]>(`https://my-json-server.typicode.com/PropiConnect/Json-placeholder/properties`)
+    this.http.get<Properties[]>(`https://inmoshare-api-production.up.railway.app/api/v1/properties`)
       .subscribe(
         data => {
           this.userProperties = data;

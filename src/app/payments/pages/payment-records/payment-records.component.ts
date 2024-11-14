@@ -48,7 +48,9 @@ export class PaymentRecordsComponent implements OnInit {
   private getAllPayments() {
     this.paymentService.getAll().subscribe((response: Array<Payment>) => {
       this.dataSource.data = response;
-      console.log(response);
+      console.log(this.dataSource.data);
+      console.log("HOLAAA");
+
     });
   }
 }
