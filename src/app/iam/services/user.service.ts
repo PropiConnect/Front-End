@@ -1,11 +1,11 @@
-import {Injectable} from '@angular/core';
-import {User} from '../models/user.model';
+import { Injectable } from '@angular/core';
+import { User } from '../models/user.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UserService {
-  private apiUrl = 'https://inmoshare-api-production.up.railway.app/api/v1/users'; // URL de la API simulada
+  private apiUrl = 'https://inmoshare-api-production.up.railway.app/api/v1/users';
 
   constructor() {}
 
@@ -25,32 +25,39 @@ export class UserService {
       });
   }
 
-
-  loginUser(email: string, password: string): Promise<User | null> {
-    return fetch(this.apiUrl)
-      .then(response => response.json())
-      .then((users: User[]) => {
-        const user = users.find(u => u.email === email && u.password === password);
-        return user || null;
+  authenticateUser(email: string, password: string): Promise<{ userId: number, username: string }> {
+    const url = `${this.apiUrl}/authenticate?email=${encodeURIComponent(email)}&password=${encodeURIComponent(password)}`;
+    return fetch(url, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    })
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Credenciales incorrectas');
+        }
+        return response.json();
       })
-      .catch(error => {
-        console.error('Error al buscar el usuario:', error);
-        return null;
+      .then(data => {
+        localStorage.setItem('userId', String(data.userId));
+        return {
+          userId: Number(data.userId),
+          username: data.username
+        };
       });
   }
 
 
 
-  getUserById(userId: string): Promise<User | null> {
-    return fetch(`${this.apiUrl}/${userId}`) // Asegúrate de que la ruta sea correcta
+
+  getUserById(userId: number): Promise<User | null> {
+    return fetch(`${this.apiUrl}/${userId}`)
       .then(response => response.json())
-      .then((user: User) => user) // Verifica que el usuario se reciba correctamente
       .catch(error => {
-        console.error('Error al obtener el usuario:', error); // Revisa posibles errores
+        console.error('Error al obtener el usuario:', error);
         return null;
       });
+
   }
-
-
-
 }

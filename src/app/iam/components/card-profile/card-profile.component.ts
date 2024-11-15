@@ -17,14 +17,18 @@ export class CardProfileComponent implements OnInit {
   constructor(private route: ActivatedRoute, private userService: UserService) {}
 
   ngOnInit(): void {
-    const userId = this.route.snapshot.paramMap.get('id');
-    console.log('User ID from route:', userId); // Para verificar si el ID está llegando
+    // Obtener userId desde localStorage si no está en la URL
+    let userId = this.route.snapshot.paramMap.get('id') || localStorage.getItem('userId');
 
     if (userId) {
-      this.userService.getUserById(userId).then(user => {
-        console.log('User data:', user); // Verifica si se está obteniendo el usuario
+      console.log('User ID:', userId);
+      this.userService.getUserById(Number(userId)).then(user => {
+        console.log('User data:', user);
         this.user = user;
       });
+    } else {
+      console.error('No se encontró el userId');
     }
   }
+
 }

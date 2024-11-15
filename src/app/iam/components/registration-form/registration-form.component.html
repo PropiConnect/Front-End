@@ -1,13 +1,14 @@
-<!-- registration-form.component.html -->
-<div class="registration-message">
-  <h2>Register</h2>
-</div>
-
 <form class="registration-form" (ngSubmit)="onSubmit()">
   <mat-form-field appearance="fill" class="form-field">
     <mat-label>Name</mat-label>
     <input matInput [(ngModel)]="name" name="name" required />
     <mat-error>Name is required.</mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill" class="form-field">
+    <mat-label>Username</mat-label>
+    <input matInput [(ngModel)]="username" name="username" required />
+    <mat-error>Username is required.</mat-error>
   </mat-form-field>
 
   <mat-form-field appearance="fill" class="form-field">
@@ -36,17 +37,13 @@
 
   <mat-form-field appearance="fill" class="form-field">
     <mat-label>Subscription Type</mat-label>
-    <mat-select name="subscriptionType" required>
-      <mat-option value="Free">Free</mat-option>
-      <mat-option value="Pro">Pro</mat-option>
-      <mat-option value="Enterprise">Enterprise</mat-option>
+    <mat-select [(ngModel)]="userType" name="userType">
+      <mat-option value="FREE">FREE</mat-option>
+      <mat-option value="PRO">PRO</mat-option>
+      <mat-option value="ENTERPRISE">ENTERPRISE</mat-option>
     </mat-select>
     <mat-error>Subscription type is required.</mat-error>
   </mat-form-field>
 
   <button type="submit" mat-raised-button color="primary">Register</button>
-  <span>Already have an account?  <a mat-button [routerLink]="'/login'" class="nav-link">
-    <p>Login</p>
-  </a> </span>
-
 </form>

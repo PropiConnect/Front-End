@@ -1,9 +1,10 @@
 export interface User {
-  id: string;  // Opcional, porque es generado por la API
+  id?: number;
   name: string;
+  username: string;
   phone: string;
   email: string;
   password: string;
-  subscriptionType: string;  // Siempre será "Free"
   address: string;
+  userType: string;
 }
