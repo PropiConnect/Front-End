@@ -3,7 +3,7 @@
 <div class="container">
   <div *ngFor="let payment of dataSource.data" >
     <mat-card class="payment-record-cards">
-      <mat-card-title> Card Owner: {{ payment.participants?.[0]?.name || 'Unknown Owner' }}</mat-card-title>
+      <mat-card-title> Card Owner: {{ payment.participants[0].name || 'Unknown' }}</mat-card-title>
       <mat-card-subtitle>ID: {{ payment.id }}</mat-card-subtitle>
     </mat-card>
     <table mat-table [dataSource]="payment.participants || []" class="mat-elevation-z8">

@@ -15,9 +15,8 @@ export const routes: Routes = [
   { path: 'login', component: LoginPageComponent },
   { path: 'profile/:id', component: CardProfileComponent },
   { path: 'home', component: HomeComponent } ,
-  { path: 'payment/:Id', component: PaymentFormComponent }, // Ruta dinámica
+  { path: 'payment', component: PaymentFormComponent }, // Ruta dinámica
   { path: 'owner/payments', component: PaymentRecordsComponent },
-
   { path: 'properties', component: MyPropertiesComponent },
   { path: 'all-properties', component: PropertiesManagementComponent},
   { path: 'create-properties-management', component: CreatePropertiesComponent }
