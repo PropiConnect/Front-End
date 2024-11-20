@@ -21,8 +21,12 @@
 
   <div class="button-container">
     <button mat-raised-button color="primary" type="submit" class="submit-button">Login</button>
-    <button mat-button color="primary" type="button" class="submit-button" (click)="goToRegister()">Register</button>
   </div>
+  <div class="create-button">
+    Don't have an account?
+    <a class="button-register" (click)="goToRegister()">Create one</a>
+  </div>
+
 
   <!-- Error message -->
   <p *ngIf="errorMessage" class="error-message">{{ errorMessage }}</p>

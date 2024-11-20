@@ -66,14 +66,27 @@ button[type="submit"]:hover {
   border: none; /* Sin borde */
 }
 
-.register-button:hover {
-  background-color: #333333; /* Color más claro al pasar el ratón */
-}
-
 .error-message {
   color: red; /* Cambia el color del texto a rojo */
   margin-top: 10px; /* Espaciado arriba del mensaje */
   font-weight: bold; /* Puedes hacer que el texto sea negrita */
 }
 
+.create-button {
+  margin: 15px;
+  text-align: center;
+  font-size: 12px;
+}
+
+.create-button a {
+  color: #5991eb
+}
+
+.button-register {
+  cursor: pointer;
+}
+
+h2 {
+  text-align: center;
+}
 
