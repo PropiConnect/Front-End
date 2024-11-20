@@ -1,0 +1,27 @@
+<mat-toolbar class="toolbar">
+  <a mat-button [routerLink]="'/home'" class="nav-link">
+    <mat-icon>home</mat-icon>
+    <span>Home</span>
+  </a>
+  <a mat-button [routerLink]="'/payment'" class="nav-link">
+    <mat-icon>event_note</mat-icon>
+    <span>Payment</span>
+  </a>
+  <a mat-button [routerLink]="'/properties'" class="nav-link">
+    <mat-icon>location_on</mat-icon>
+    <span>Properties</span>
+  </a>
+  <a mat-button [routerLink]="'/owner/payments'" class="nav-link">
+    <mat-icon>description</mat-icon>
+    <span>Payment Records</span>
+  </a>
+
+  <span class="spacer"></span>
+
+  <a mat-icon-button [routerLink]="['/search']">
+    <mat-icon>search</mat-icon>
+  </a>
+
+  <button mat-raised-button color="accent" [routerLink]="'/profile/1'">My Account</button>
+
+</mat-toolbar>
