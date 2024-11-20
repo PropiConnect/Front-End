@@ -22,6 +22,11 @@
     <mat-icon>search</mat-icon>
   </a>
 
-  <button mat-raised-button color="accent" [routerLink]="'/profile/1'">My Account</button>
+  <button
+    mat-raised-button
+    color="accent"
+    (click)="navigateToMyAccount()">
+    My Account
+  </button>
 
 </mat-toolbar>

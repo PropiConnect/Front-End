@@ -48,8 +48,10 @@ export class UserService {
       });
   }
 
-
-
+  getCurrentUserId(): number | null {
+    const userId = localStorage.getItem('userId');
+    return userId ? Number(userId) : null;
+  }
 
   getUserById(userId: number): Promise<User | null> {
     return fetch(`${this.apiUrl}/${userId}`)
@@ -60,4 +62,5 @@ export class UserService {
       });
 
   }
+
 }
