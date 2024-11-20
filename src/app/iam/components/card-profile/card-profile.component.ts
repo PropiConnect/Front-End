@@ -4,11 +4,13 @@ import {ActivatedRoute} from "@angular/router";
 import {UserService} from "../../services/user.service";
 import {NgIf} from "@angular/common";
 import {ToolbarComponent} from "../../../public/pages/toolbar/toolbar.component";
+import {MatIcon} from "@angular/material/icon";
+import {MatButton, MatIconButton} from "@angular/material/button";
 
 @Component({
   selector: 'app-card-profile',
   standalone: true,
-  imports: [NgIf, ToolbarComponent],
+  imports: [NgIf, ToolbarComponent, MatIcon, MatIconButton, MatButton],
   templateUrl: './card-profile.component.html',
   styleUrls: ['./card-profile.component.css']
 })

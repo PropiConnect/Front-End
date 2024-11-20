@@ -1,49 +1,90 @@
-/* Contenedor principal del perfil */
-.profile-container {
-  max-width: 600px;
+/* Página de perfil */
+.profile-page {
+  max-width: 900px;
   margin: 2em auto;
-  padding: 2em;
-  border: 1px solid rgba(0, 0, 0, 0.1); /* Borde sutil */
+  padding: 1em;
+  background-color: #f9f9f9;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* Sombra suave */
-  background-color: transparent; /* Sin fondo */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-/* Título principal */
-.profile-container h1 {
-  font-size: 2em;
+/* Encabezado del perfil */
+.profile-header {
   text-align: center;
-  margin-bottom: 1.5em;
-  color: #333;
-  font-weight: 600; /* Negrita más moderada */
+  margin-bottom: 2em;
+}
+
+.profile-avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin-bottom: 1em;
+}
+
+.profile-title {
+  font-size: 2.5em;
+  font-weight: bold;
+  color: #007bff;
+}
+
+/* Contenido del perfil */
+.profile-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
 }
 
 /* Detalles del perfil */
-.profile-details p {
+.profile-details {
+  display: flex;
+  flex-direction: column;
+  gap: 1em; /* Espacio entre filas */
+}
+
+.profile-item {
+  display: flex;
+  align-items: center;
+}
+
+.profile-item label {
+  min-width: 150px; /* Ancho fijo para los labels */
+  text-align: left; /* Alineación del texto a la izquierda */
   font-size: 1.1em;
-  color: #555; /* Texto más suave */
-  margin-bottom: 1em;
-  line-height: 1.6;
+  color: #555;
+  margin-right: 10px; /* Espaciado entre label e input */
 }
 
-/* Estilo de los textos en negrita */
-.profile-details strong {
-  color: #007bff; /* Color de acento azul metálico */
+.profile-item input,
+.profile-item select {
+  flex: 1; /* El input ocupa el espacio restante */
+  padding: 0.5em;
+  font-size: 1em;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background-color: #fff;
 }
 
-/* Estilo de carga */
-p {
-  text-align: center;
-  color: #007bff; /* Azul metálico */
-  font-size: 1.2em;
+.profile-item button {
+  margin-left: 10px; /* Separar el botón del input */
 }
 
-/* Agregar un efecto de transición suave al contenedor */
-.profile-container {
-  transition: transform 0.3s ease-in-out;
+/* Botones de acción */
+.profile-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
 }
 
-/* Añadir un pequeño efecto al pasar el cursor por encima del contenedor */
-.profile-container:hover {
-  transform: scale(1.02);
+.profile-actions button {
+  padding: 0.8em 2em;
+  font-size: 1em;
+}
+
+.section-name {
+  font-size: 44px;
+  font-weight: bold;
+  text-align: start;
+  color: #3f51b5;
+  margin: 20px 40px;
+  display: inline-block;
 }

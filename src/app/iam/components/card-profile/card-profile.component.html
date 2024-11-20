@@ -1,19 +1,52 @@
 <app-toolbar></app-toolbar>
-<div *ngIf="user; else loading">
-  <div class="profile-container">
-    <h1>User Profile</h1>
+<h1 class="section-name">My Account</h1>
+<div *ngIf="user; else loading" class="profile-page">
+  <div class="profile-content">
     <div class="profile-details">
-      <p><strong>ID:</strong> {{ user.id }}</p>
-      <p><strong>Name:</strong> {{ user.name }}</p>
-      <p><strong>Username:</strong> {{ user.username }}</p>
-      <p><strong>Email:</strong> {{ user.email }}</p>
-      <p><strong>Phone:</strong> {{ user.phone }}</p>
-      <p><strong>Address:</strong> {{ user.address }}</p>
-      <p><strong>User Type:</strong> {{ user.userType }}</p>
+      <div class="profile-item">
+        <label>Name</label>
+        <input type="text" [value]="user.name" disabled />
+        <button mat-icon-button>
+          <mat-icon>edit</mat-icon>
+        </button>
+      </div>
+      <div class="profile-item">
+        <label>Phone</label>
+        <input type="text" [value]="user.phone" disabled />
+        <button mat-icon-button>
+          <mat-icon>edit</mat-icon>
+        </button>
+      </div>
+      <div class="profile-item">
+        <label>Email</label>
+        <input type="email" [value]="user.email" disabled />
+      </div>
+      <div class="profile-item">
+        <label>Password</label>
+        <input type="password" value="********" disabled />
+        <button mat-icon-button>
+          <mat-icon>edit</mat-icon>
+        </button>
+      </div>
+      <div class="profile-item">
+        <label>Plan</label>
+        <input type="email" [value]="user.userType" disabled />
+      </div>
+      <div class="profile-item">
+        <label>Address</label>
+        <input type="text" [value]="user.address" disabled />
+        <button mat-icon-button>
+          <mat-icon>edit</mat-icon>
+        </button>
+      </div>
+    </div>
+    <div class="profile-actions">
+      <button mat-raised-button color="primary">Save</button>
+      <button mat-raised-button color="primary">Payment History</button>
     </div>
   </div>
 </div>
 
 <ng-template #loading>
-  <p>Loading Profile...</p>
+  <p>Loading profile...</p>
 </ng-template>
