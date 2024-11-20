@@ -1,13 +1,15 @@
-import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { MatFormFieldModule } from "@angular/material/form-field";
-import { MatInputModule } from "@angular/material/input";
 import { User } from "../../models/user.model";
 import { UserService } from "../../services/user.service";
 import { MatOption, MatSelect } from "@angular/material/select";
 import { Router, RouterLink } from "@angular/router";
-import { MatAnchor } from "@angular/material/button";
+import {MatAnchor, MatIconButton} from "@angular/material/button";
 import { MatIcon } from "@angular/material/icon";
+import {ChangeDetectionStrategy, Component, signal} from '@angular/core';
+import {MatButtonModule} from '@angular/material/button';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatIconModule} from '@angular/material/icon';
+import {MatInputModule} from '@angular/material/input';
 
 @Component({
   selector: 'app-registration-form',
@@ -20,11 +22,17 @@ import { MatIcon } from "@angular/material/icon";
     MatOption,
     MatAnchor,
     MatIcon,
-    RouterLink
+    RouterLink,
+    MatButtonModule,
+    MatIconModule,
+    MatIconButton
   ],
   templateUrl: './registration-form.component.html',
-  styleUrls: ['./registration-form.component.css']
+  styleUrls: ['./registration-form.component.css'],
 })
+
+
+
 export class RegistrationFormComponent {
   name: string = '';
   username: string = '';
@@ -34,7 +42,14 @@ export class RegistrationFormComponent {
   address: string = '';
   userType: string = 'FREE'; // Valor predeterminado
 
+  hide = signal(true);
+
   constructor(private userService: UserService, private router: Router) {}
+
+  clickEvent(event: MouseEvent) {
+    this.hide.set(!this.hide());
+    event.stopPropagation();
+  }
 
   onSubmit() {
     if (!this.name || !this.username || !this.phone || !this.email || !this.password || !this.address) {
@@ -63,4 +78,5 @@ export class RegistrationFormComponent {
         alert('Error al registrar el usuario. Inténtalo nuevamente.');
       });
   }
+
 }

@@ -6,6 +6,7 @@
   background-color: #ffffff; /* Fondo blanco */
   border-radius: 8px; /* Bordes redondeados */
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra más profunda */
+
 }
 
 /* Estilos para los campos del formulario */
@@ -52,3 +53,30 @@ button[type="submit"]:hover {
 .register-button:hover {
   background-color: #333333; /* Color más claro al pasar el ratón */
 }
+
+.password-field {
+  display: flex;
+  align-items: center;
+}
+
+/* Centra el icono del ojo dentro del botón */
+.password-btn {
+  all: unset;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  height: 48px;
+  width: 48px;
+  margin-right: 0;
+}
+
+.password {
+  width: 100%;
+}
+
+.form-field{
+  width: 100%;
+}
+
+

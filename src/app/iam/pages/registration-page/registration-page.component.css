@@ -5,6 +5,8 @@
   background-position: center;
   height: 100vh; /* Ocupa toda la pantalla */
   display: flex;
+  position: absolute;
+  width: 100%;
   justify-content: center; /* Centra horizontalmente */
   align-items: center; /* Centra verticalmente */
 }
