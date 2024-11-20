@@ -10,23 +10,26 @@ import {MatCardModule} from "@angular/material/card";
 import {MatIconModule} from "@angular/material/icon";
 import {MatGridListModule} from "@angular/material/grid-list";
 import {ReactiveFormsModule} from "@angular/forms";
-import {MatDialogModule} from "@angular/material/dialog"; // Asegúrate de ajustar la ruta según tu estructura de proyecto
+import {MatDialogModule} from "@angular/material/dialog";
+import {ToolbarComponent} from "../../../public/pages/toolbar/toolbar.component"; // Asegúrate de ajustar la ruta según tu estructura de proyecto
 
 @Component({
   selector: 'app-my-properties',
   standalone: true,
-  imports: [
-    CommonModule,
-    HttpClientModule,  // Asegurarse de importar HttpClientModule aquí
-    MatFormFieldModule,
-    MatInputModule,
-    MatButtonModule,
-    MatCardModule,
-    MatIconModule,
-    MatGridListModule,
-    ReactiveFormsModule,
-    MatDialogModule // Asegurarse de importar MatDialogModule aquí
-  ],
+    imports: [
+        CommonModule,
+        HttpClientModule,  // Asegurarse de importar HttpClientModule aquí
+        MatFormFieldModule,
+        MatInputModule,
+        MatButtonModule,
+        MatCardModule,
+        MatIconModule,
+        MatGridListModule,
+        ReactiveFormsModule,
+        MatDialogModule,
+        ToolbarComponent,
+        // Asegurarse de importar MatDialogModule aquí
+    ],
   templateUrl: './my-properties.component.html',
   styleUrl: './my-properties.component.css'
 })
