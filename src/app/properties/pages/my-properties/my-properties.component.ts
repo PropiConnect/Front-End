@@ -45,7 +45,7 @@ export class MyPropertiesComponent {
 
   // Cargar las propiedades del usuario
   loadUserProperties(): void {
-    this.http.get<Properties[]>(`https://my-json-server.typicode.com/PropiConnect/Json-placeholder/properties?ownerId=${this.userId}`)
+    this.http.get<Properties[]>(`https://inmoshare-api-production.up.railway.app/api/v1/properties/owner/1`)
       .subscribe(
         data => {
           this.userProperties = data;
