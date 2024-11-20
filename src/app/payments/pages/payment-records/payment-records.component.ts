@@ -7,21 +7,23 @@ import {HttpClientModule} from '@angular/common/http';
 import {MatTableDataSource, MatTableModule} from '@angular/material/table';
 import {MatCard, MatCardSubtitle, MatCardTitle} from "@angular/material/card";
 import {MatToolbar} from "@angular/material/toolbar"; // Import MatTableModule
-import {CommonModule} from '@angular/common'; // Import CommonModule
+import {CommonModule} from '@angular/common';
+import {ToolbarComponent} from "../../../public/pages/toolbar/toolbar.component"; // Import CommonModule
 @Component({
   selector: 'app-payment-records',
   standalone: true,
-  imports: [
-    HttpClientModule, // Ensure HttpClientModule is imported
-    MatTableModule, // Import MatTableModule
-    MatSort,
-    MatPaginator,
-    MatCard,
-    MatCardTitle,
-    MatCardSubtitle,
-    MatToolbar,
-    CommonModule
-  ],
+    imports: [
+        HttpClientModule, // Ensure HttpClientModule is imported
+        MatTableModule, // Import MatTableModule
+        MatSort,
+        MatPaginator,
+        MatCard,
+        MatCardTitle,
+        MatCardSubtitle,
+        MatToolbar,
+        CommonModule,
+        ToolbarComponent
+    ],
   providers: [PaymentService], // Ensure PaymentService is provided
   templateUrl: './payment-records.component.html',
   styleUrls: ['./payment-records.component.css']

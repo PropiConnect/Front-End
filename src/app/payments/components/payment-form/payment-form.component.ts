@@ -9,7 +9,8 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {CommonModule} from '@angular/common';
 import {MatDialog, MatDialogModule} from '@angular/material/dialog';
-import {PaymentConfirmationDialogComponent} from "../payment-confirmation-dialog/payment-confirmation-dialog.component"; // Importamos MatDialog
+import {PaymentConfirmationDialogComponent} from "../payment-confirmation-dialog/payment-confirmation-dialog.component";
+import {ToolbarComponent} from "../../../public/pages/toolbar/toolbar.component"; // Importamos MatDialog
 
 
 @Component({
@@ -17,18 +18,20 @@ import {PaymentConfirmationDialogComponent} from "../payment-confirmation-dialog
   standalone: true,
   templateUrl: './payment-form.component.html',
   styleUrls: ['./payment-form.component.css'],
-  imports: [
-    CommonModule,
-    HttpClientModule,  // Asegurarse de importar HttpClientModule aquí
-    MatFormFieldModule,
-    MatInputModule,
-    MatButtonModule,
-    MatCardModule,
-    MatIconModule,
-    MatGridListModule,
-    ReactiveFormsModule,
-    MatDialogModule // Asegurarse de importar MatDialogModule aquí
-  ]
+    imports: [
+        CommonModule,
+        HttpClientModule,  // Asegurarse de importar HttpClientModule aquí
+        MatFormFieldModule,
+        MatInputModule,
+        MatButtonModule,
+        MatCardModule,
+        MatIconModule,
+        MatGridListModule,
+        ReactiveFormsModule,
+        MatDialogModule,
+        ToolbarComponent,
+        // Asegurarse de importar MatDialogModule aquí
+    ]
 })
 export class PaymentFormComponent implements OnInit {
   paymentForm: FormGroup;
