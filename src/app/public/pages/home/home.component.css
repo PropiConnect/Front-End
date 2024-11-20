@@ -3,7 +3,7 @@
   width: 50%;
   flex-direction: column;
   gap: 20px;
-  margin: 40px;
+  margin: 0 auto;
 }
 
 .property-info-section {
@@ -37,8 +37,10 @@
 .section-name{
   font-size: 44px;
   font-weight: bold;
-  text-align: center;
+  text-align: start;
   color: #3f51b5;
+  margin:20px 40px;
+  display: inline-block;
 }
 
 .property-type {

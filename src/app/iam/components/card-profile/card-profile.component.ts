@@ -3,11 +3,12 @@ import {User} from "../../models/user.model";
 import {ActivatedRoute} from "@angular/router";
 import {UserService} from "../../services/user.service";
 import {NgIf} from "@angular/common";
+import {ToolbarComponent} from "../../../public/pages/toolbar/toolbar.component";
 
 @Component({
   selector: 'app-card-profile',
   standalone: true,
-  imports: [NgIf],
+  imports: [NgIf, ToolbarComponent],
   templateUrl: './card-profile.component.html',
   styleUrls: ['./card-profile.component.css']
 })
