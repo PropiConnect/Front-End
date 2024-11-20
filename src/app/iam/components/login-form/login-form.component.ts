@@ -34,7 +34,7 @@ export class LoginFormComponent {
       .then(({ userId, username }) => {
         console.log('Usuario autenticado:', userId, username);
         // Navega a la página de perfil pasando el userId como parámetro
-        this.router.navigate(['/profile', userId]);
+        this.router.navigate(['/home']);
       })
       .catch(error => {
         this.errorMessage = 'Correo electrónico o contraseña incorrectos.';
