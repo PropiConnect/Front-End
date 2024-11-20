@@ -15,7 +15,7 @@ export const routes: Routes = [
   { path: 'login', component: LoginPageComponent },
   { path: 'profile/:id', component: CardProfileComponent },
   { path: 'home', component: HomeComponent } ,
-  { path: 'payment/:Id', component: PaymentFormComponent },
+  { path: 'payment', component: PaymentFormComponent },
   { path: 'owner/payments', component: PaymentRecordsComponent },
 
   { path: 'properties', component: MyPropertiesComponent },
