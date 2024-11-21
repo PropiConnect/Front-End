@@ -18,7 +18,14 @@ export class LanguageSwitcherComponent {
   protected languages: string[] = ['en', 'es'];
 
   constructor(private translate: TranslateService) {
-    this.currentLang = this.translate.currentLang;
+    // Configurar 'en' como dioma predeterminado
+    const defaultLang = 'en';
+    this.translate.setDefaultLang(defaultLang);
+
+    // Configurar el idioma actual con el idioma seleccionado y si no hay cambios manetner el predeterminado
+    const browserLang = this.translate.getBrowserLang() || defaultLang;
+    this.translate.use(browserLang);
+    this.currentLang = this.translate.currentLang || browserLang;
   }
 
   useLanguage(language: string) {
