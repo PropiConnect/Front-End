@@ -33,6 +33,11 @@ export class LoginFormComponent {
     this.userService.authenticateUser(this.email, this.password)
       .then(({ userId, username }) => {
         console.log('Usuario autenticado:', userId, username);
+
+        // Guardar en localStorage
+        localStorage.setItem('userId', String(userId));
+        localStorage.setItem('username', username);
+
         // Navega a la página de perfil pasando el userId como parámetro
         this.router.navigate(['/home']);
       })

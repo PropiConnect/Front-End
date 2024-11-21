@@ -50,4 +50,33 @@ export class CreatePropertiesComponent implements OnInit, AfterViewInit {
   ngAfterViewInit() {
     console.log('View initialized');
   }
+
+  registerProperty(): void {
+    // Verificar que localStorage tenga los valores correctos
+    const ownerId = Number(localStorage.getItem('userId'));
+    const ownerName = localStorage.getItem('username');
+
+    if (!ownerId || !ownerName) {
+      console.error('Error: ownerId o ownerName no están disponibles en localStorage');
+      alert('No se puede registrar la propiedad: falta información del propietario.');
+      return;
+    }
+
+    // Asegurarse de incluir ownerId y ownerName al registrar la propiedad
+    const propertyWithOwner = { ...this.property, ownerId, ownerName };
+
+    this.propertyService.addProperty(propertyWithOwner)
+      .then(newProperty => {
+        console.log('Propiedad registrada correctamente:', newProperty);
+        alert('Propiedad registrada exitosamente');
+        this.property = new Properties({}); // Limpiar el formulario después de registrar
+      })
+      .catch(error => {
+        console.error('Error al registrar la propiedad:', error);
+        alert('Ocurrió un error al registrar la propiedad.');
+      });
+  }
+
+
+
 }
