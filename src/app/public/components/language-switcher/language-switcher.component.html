@@ -1,7 +1,9 @@
+
 <mat-button-toggle-group [value]="currentLang"
                           appearance="standard"
                           aria-label="Preferred language"
-                          name="language">
+                          name="language"
+class="buttontoggle">
   @for (language of languages; track language){
     <mat-button-toggle [value]="language"
                        [aria-label]="language"
