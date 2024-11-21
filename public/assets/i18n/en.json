@@ -1,0 +1,40 @@
+{
+  "login": {
+    "welcome": "Welcome",
+    "login": "Login",
+    "email": "Email",
+    "erequired": "Email is required",
+    "password": "Password",
+    "prequired": "Password is required",
+    "reminder": "Don't have an account? ",
+    "register": "Create one"
+  },
+  "signup": {
+    "title": "Sign Up",
+    "name": "Name",
+    "username": "Username",
+    "phone": "Phone",
+    "email": "Email",
+    "password": "Password",
+    "address": "Address",
+    "subtype": "Subscription Type",
+    "register": "Register"
+  },
+  "toolbar": {
+    "thome": "Home",
+    "prop": "My Properties",
+    "payment": "Payment Records"
+  },
+  "home": {
+
+  },
+  "properties": {
+
+  },
+  "payments": {
+
+  },
+  "myaccount": {
+
+  }
+}

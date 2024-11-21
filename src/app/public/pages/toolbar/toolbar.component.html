@@ -1,22 +1,20 @@
 <mat-toolbar class="toolbar">
   <a mat-button [routerLink]="'/home'" class="nav-link">
     <mat-icon>home</mat-icon>
-    <span>Home</span>
+    <span>{{ 'toolbar.thome' | translate }}</span>
   </a>
   <a mat-button [routerLink]="'/properties'" class="nav-link">
     <mat-icon>location_on</mat-icon>
-    <span>Properties</span>
+    <span>{{ 'toolbar.prop' | translate }}</span>
   </a>
   <a mat-button [routerLink]="'/owner/payments'" class="nav-link">
     <mat-icon>description</mat-icon>
-    <span>Payment Records</span>
+    <span>{{ 'toolbar.payment' | translate }}</span>
   </a>
 
   <span class="spacer"></span>
 
-  <a mat-icon-button [routerLink]="['/search']">
-    <mat-icon>search</mat-icon>
-  </a>
+
   <app-language-switcher/>
 
   <button

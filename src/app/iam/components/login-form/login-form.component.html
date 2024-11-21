@@ -1,21 +1,21 @@
 <div class="welcome-message">
-  <h2>Welcome</h2>
+  <h2>{{'login.welcome'| translate}}</h2>
 </div>
 
 <form (ngSubmit)="onSubmit()" #loginForm="ngForm" class="login-form">
   <mat-form-field class="form-field" appearance="outline">
-    <mat-label>Email</mat-label>
+    <mat-label>{{ 'login.email' | translate }}</mat-label>
     <input matInput [(ngModel)]="email" name="email" required #emailInput="ngModel">
     <mat-error *ngIf="emailInput.invalid && emailInput.touched">
-      Email is required
+      {{ 'login.erequired' | translate }}
     </mat-error>
   </mat-form-field>
 
   <mat-form-field class="form-field" appearance="outline">
-    <mat-label>Password</mat-label>
+    <mat-label>{{ 'login.password' | translate }}</mat-label>
     <input matInput type="password" [(ngModel)]="password" name="password" required #passwordInput="ngModel">
     <mat-error *ngIf="passwordInput.invalid && passwordInput.touched">
-      Password is required
+      {{ 'login.prequired' | translate }}
     </mat-error>
   </mat-form-field>
 
@@ -23,8 +23,8 @@
     <button mat-raised-button color="primary" type="submit" class="submit-button">Login</button>
   </div>
   <div class="create-button">
-    Don't have an account?
-    <a class="button-register" (click)="goToRegister()">Create one</a>
+    {{ 'login.reminder' | translate }}
+    <a class="button-register" (click)="goToRegister()">{{ 'login.register' | translate }}</a>
   </div>
 
 

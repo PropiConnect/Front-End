@@ -9,12 +9,13 @@ import {LoginFormComponent} from "../../../iam/components/login-form/login-form.
 import {PaymentFormComponent} from "../../../payments/components/payment-form/payment-form.component";
 import {UserService} from "../../../iam/services/user.service";
 import {LanguageSwitcherComponent} from "../../components/language-switcher/language-switcher.component";
+import {TranslateModule} from "@ngx-translate/core";
 
 
 @Component({
   selector: 'app-toolbar',
   standalone: true,
-  imports: [RouterOutlet, RegistrationFormComponent, LoginFormComponent, PaymentFormComponent, MatButton, MatIconAnchor, MatIcon, MatAnchor, RouterLink, MatToolbar, LoginPageComponent, LanguageSwitcherComponent],
+  imports: [RouterOutlet, RegistrationFormComponent, LoginFormComponent, PaymentFormComponent, MatButton, MatIconAnchor, MatIcon, MatAnchor, RouterLink, MatToolbar, LoginPageComponent, LanguageSwitcherComponent, TranslateModule],
   templateUrl: './toolbar.component.html',
   styleUrls: ['./toolbar.component.css']
 })

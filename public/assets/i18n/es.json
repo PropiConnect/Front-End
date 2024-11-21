@@ -1,0 +1,22 @@
+{
+  "login": {
+
+  },
+  "toolbar": {
+    "thome": "Inicio",
+    "prop": "Mis Propiedades",
+    "payment": "Registro de pagos"
+  },
+  "home": {
+
+  },
+  "properties": {
+
+  },
+  "payments": {
+
+  },
+  "myaccount": {
+
+  }
+}

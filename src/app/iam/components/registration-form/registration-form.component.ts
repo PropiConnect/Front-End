@@ -10,6 +10,8 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatIconModule} from '@angular/material/icon';
 import {MatInputModule} from '@angular/material/input';
+import {TranslateModule} from "@ngx-translate/core";
+import {LanguageSwitcherComponent} from "../../../public/components/language-switcher/language-switcher.component";
 
 @Component({
   selector: 'app-registration-form',
@@ -25,7 +27,9 @@ import {MatInputModule} from '@angular/material/input';
     RouterLink,
     MatButtonModule,
     MatIconModule,
-    MatIconButton
+    MatIconButton,
+    TranslateModule,
+    LanguageSwitcherComponent
   ],
   templateUrl: './registration-form.component.html',
   styleUrls: ['./registration-form.component.css'],

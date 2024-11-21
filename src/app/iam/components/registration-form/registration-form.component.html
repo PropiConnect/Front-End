@@ -1,36 +1,36 @@
 <form class="registration-form" (ngSubmit)="onSubmit()">
-
+  <app-language-switcher/>
   <div class="welcome-message">
-    <h2>Sign Up</h2>
+    <h2>{{ 'signup.tittle' | translate }}</h2>
   </div>
 
   <mat-form-field appearance="fill" class="form-field">
-    <mat-label>Name</mat-label>
+    <mat-label>{{ 'signup.name' | translate }}</mat-label>
     <input matInput [(ngModel)]="name" name="name" required />
-    <mat-error>Name is required.</mat-error>
+    <mat-error>{{ 'signup.name' | translate }} is required.</mat-error>
   </mat-form-field>
 
   <mat-form-field appearance="fill" class="form-field">
-    <mat-label>Username</mat-label>
+    <mat-label>{{ 'signup.username' | translate }}</mat-label>
     <input matInput [(ngModel)]="username" name="username" required />
-    <mat-error>Username is required.</mat-error>
+    <mat-error>{{ 'signup.username' | translate }} is required.</mat-error>
   </mat-form-field>
 
   <mat-form-field appearance="fill" class="form-field">
-    <mat-label>Phone</mat-label>
+    <mat-label>{{ 'signup.phone' | translate }}</mat-label>
     <input matInput [(ngModel)]="phone" name="phone" required />
-    <mat-error>Phone is required.</mat-error>
+    <mat-error>{{ 'signup.phone' | translate }} is required.</mat-error>
   </mat-form-field>
 
   <mat-form-field appearance="fill" class="form-field">
-    <mat-label>Email</mat-label>
+    <mat-label>{{ 'signup.email' | translate }}</mat-label>
     <input matInput [(ngModel)]="email" name="email" required />
-    <mat-error>Email is required.</mat-error>
+    <mat-error>{{ 'signup.email' | translate }} is required.</mat-error>
   </mat-form-field>
 
   <div class="password">
     <mat-form-field appearance="fill" class="form-field password-field">
-      <mat-label>Password</mat-label>
+      <mat-label>{{ 'signup.password' | translate }}</mat-label>
       <input
         matInput
         [type]="hide() ? 'password' : 'text'"
@@ -49,25 +49,25 @@
       >
         <mat-icon>{{ hide() ? 'visibility_off' : 'visibility' }}</mat-icon>
       </button>
-      <mat-error>Password is required.</mat-error>
+      <mat-error>{{ 'signup.password' | translate }} is required.</mat-error>
     </mat-form-field>
   </div>
 
   <mat-form-field appearance="fill" class="form-field">
-    <mat-label>Address</mat-label>
+    <mat-label>{{ 'signup.address' | translate }}</mat-label>
     <input matInput [(ngModel)]="address" name="address" required />
-    <mat-error>Address is required.</mat-error>
+    <mat-error>{{ 'signup.address' | translate }} is required.</mat-error>
   </mat-form-field>
 
   <mat-form-field appearance="fill" class="form-field">
-    <mat-label>Subscription Type</mat-label>
+    <mat-label>{{ 'signup.subtype' | translate }}</mat-label>
     <mat-select [(ngModel)]="userType" name="userType">
       <mat-option value="FREE">FREE</mat-option>
       <mat-option value="PRO">PRO</mat-option>
       <mat-option value="ENTERPRISE">ENTERPRISE</mat-option>
     </mat-select>
-    <mat-error>Subscription type is required.</mat-error>
+    <mat-error>{{ 'signup.subtype' | translate }} is required.</mat-error>
   </mat-form-field>
 
-  <button class="enviar" type="submit" mat-raised-button color="primary">Register</button>
+  <button class="enviar" type="submit" mat-raised-button color="primary">{{ 'signup.register' | translate }}</button>
   </form>

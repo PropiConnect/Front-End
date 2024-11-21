@@ -6,6 +6,7 @@ import { Router } from "@angular/router";
 import { NgIf } from "@angular/common";
 import { MatButtonModule } from '@angular/material/button';
 import { UserService } from "../../services/user.service";
+import {TranslateModule} from "@ngx-translate/core";
 
 @Component({
   selector: 'app-login-form',
@@ -15,7 +16,8 @@ import { UserService } from "../../services/user.service";
     MatFormFieldModule,
     MatInputModule,
     NgIf,
-    MatButtonModule
+    MatButtonModule,
+    TranslateModule
   ],
   templateUrl: './login-form.component.html',
   styleUrls: ['./login-form.component.css']

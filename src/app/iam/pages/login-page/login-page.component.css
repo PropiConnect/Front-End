@@ -16,3 +16,6 @@
   border-radius: 10px; /* Bordes redondeados */
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Sombra para dar un efecto de profundidad */
 }
+.i18n-container{
+  justify-content: right;
+}
