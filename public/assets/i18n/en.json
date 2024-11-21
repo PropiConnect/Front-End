@@ -7,7 +7,8 @@
     "password": "Password",
     "prequired": "Password is required",
     "reminder": "Don't have an account? ",
-    "register": "Create one"
+    "register": "Create one",
+    "error": "Invalid email or password"
   },
   "signup": {
     "title": "Sign Up",
@@ -58,6 +59,20 @@
     "savebtn": "Save",
     "paymentbtn": "Payment History"
 
+  },
+  "payment2": {
+   "title": "Payment",
+    "price": "Price",
+    "ptype": "Property Type",
+    "address": "Address",
+    "description": "Description",
+    "cnumber": "Card Number",
+    "pname": "Name",
+    "ppercentage": "Payment Percentage",
+    "ownpercentage": "Owner Percentage",
+    "pemail": "Email",
+    "addpart": "Add Participant",
+    "paybtn": "Pay"
   },
   "newproperty": {
     "tittle": "Property Registration",

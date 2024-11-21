@@ -7,7 +7,8 @@
     "password": "Contraseña",
     "prequired": "La contraseña es obligatoria",
     "reminder": "¿No tienes una cuenta? ",
-    "register": "Crea una"
+    "register": "Crea una",
+    "error": "Correo electrónico o contraseña inválidos"
   },
   "signup": {
     "title": "Registrarse",
@@ -58,6 +59,20 @@
     "savebtn": "Guardar",
     "paymentbtn": "Historial de Pagos"
   },
+  "payment2": {
+  "title": "Pago",
+  "price": "Precio",
+  "ptype": "Tipo de vivienda",
+  "address": "Dirección",
+  "description": "Descripción",
+  "cnumber": "Numero de tarjeta",
+  "pname": "Nombre de la persona",
+  "ppercentage": "Porcentaje de pago",
+  "ownpercentage": "Porcentaje de la propiedad",
+  "pemail": "Correo de la persona",
+  "addpart": "Añadir participante",
+  "paybtn": "Realizar pago"
+},
   "newproperty": {
     "tittle": "Registro de inmueble",
     "city": "Ciudad",

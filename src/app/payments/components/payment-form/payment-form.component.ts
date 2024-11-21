@@ -14,6 +14,7 @@ import { ToolbarComponent } from "../../../public/pages/toolbar/toolbar.componen
 import { ActivatedRoute } from '@angular/router';
 import { UserService } from "../../../iam/services/user.service";
 import { User } from "../../../iam/models/user.model";
+import {TranslateModule} from "@ngx-translate/core";
 
 @Component({
   selector: 'app-payment-form',
@@ -32,6 +33,7 @@ import { User } from "../../../iam/models/user.model";
     ReactiveFormsModule,
     MatDialogModule,
     ToolbarComponent,
+    TranslateModule,
   ]
 })
 export class PaymentFormComponent implements OnInit {
