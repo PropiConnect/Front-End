@@ -11,6 +11,13 @@
         </button>
       </div>
       <div class="profile-item">
+        <label>Username</label>
+        <input type="text" [(ngModel)]="user.username" [disabled]="!isEditing" />
+        <button mat-icon-button (click)="toggleEdit()">
+          <mat-icon>{{ isEditing ? 'done' : 'edit' }}</mat-icon>
+        </button>
+      </div>
+      <div class="profile-item">
         <label>Phone</label>
         <input type="text" [(ngModel)]="user.phone" [disabled]="!isEditing" />
         <button mat-icon-button (click)="toggleEdit()">
