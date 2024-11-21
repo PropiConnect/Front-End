@@ -11,33 +11,35 @@ import {MatIconModule} from "@angular/material/icon";
 import {MatGridListModule} from "@angular/material/grid-list";
 import {ReactiveFormsModule} from "@angular/forms";
 import {MatDialogModule} from "@angular/material/dialog";
-import {ToolbarComponent} from "../../../public/pages/toolbar/toolbar.component"; // Asegúrate de ajustar la ruta según tu estructura de proyecto
+import {ToolbarComponent} from "../../../public/pages/toolbar/toolbar.component";
+import {PropertiesService} from "../../services/properties.service"; // Asegúrate de ajustar la ruta según tu estructura de proyecto
 
 @Component({
   selector: 'app-my-properties',
   standalone: true,
-    imports: [
-        CommonModule,
-        HttpClientModule,  // Asegurarse de importar HttpClientModule aquí
-        MatFormFieldModule,
-        MatInputModule,
-        MatButtonModule,
-        MatCardModule,
-        MatIconModule,
-        MatGridListModule,
-        ReactiveFormsModule,
-        MatDialogModule,
-        ToolbarComponent,
-        // Asegurarse de importar MatDialogModule aquí
-    ],
+  imports: [
+    CommonModule,
+    HttpClientModule,  // Asegurarse de importar HttpClientModule aquí
+    MatFormFieldModule,
+    MatInputModule,
+    MatButtonModule,
+    MatCardModule,
+    MatIconModule,
+    MatGridListModule,
+    ReactiveFormsModule,
+    MatDialogModule,
+    ToolbarComponent,
+    // Asegurarse de importar MatDialogModule aquí
+  ],
   templateUrl: './my-properties.component.html',
-  styleUrl: './my-properties.component.css'
+  styleUrl: './my-properties.component.css',
+  providers: [PropertiesService]
 })
 export class MyPropertiesComponent {
   userProperties: Properties[] = [];
-  userId: number = 1; // Asumimos que el ID del usuario es 1, cámbialo por la lógica de autenticación que uses
+  userId: number = 0; // Asumimos que el ID del usuario es 1, cámbialo por la lógica de autenticación que uses
 
-  constructor(private http: HttpClient, private router: Router) {}
+  constructor(private propertiesService: PropertiesService, private http: HttpClient, private router: Router) {}
 
   ngOnInit(): void {
     this.loadUserProperties();
@@ -45,18 +47,23 @@ export class MyPropertiesComponent {
 
   // Cargar las propiedades del usuario
   loadUserProperties(): void {
-    this.http.get<Properties[]>(`https://inmoshare-api-production.up.railway.app/api/v1/properties/owner/1`)
-      .subscribe(
-        data => {
-          this.userProperties = data;
-        },
-        error => {
-          console.error('Error al cargar las propiedades del usuario', error);
-        }
-      );
+    this.userId = Number(localStorage.getItem('userId')); // Obtener userId del localStorage
+
+    if (!this.userId) {
+      console.error('No se encontró el userId en localStorage');
+      return;
+    }
+
+    this.propertiesService.getPropertiesByOwnerId(this.userId)
+      .then(properties => {
+        this.userProperties = properties;
+        console.log('Propiedades cargadas:', this.userProperties);
+      })
+      .catch(error => {
+        console.error('Error al cargar las propiedades del usuario', error);
+      });
   }
 
-  // Redirigir a la página de edición de propiedades
   editProperty(propertyId: number): void {
     this.router.navigate(['/properties-managment'], { queryParams: { id: propertyId } });
   }
@@ -66,20 +73,16 @@ export class MyPropertiesComponent {
     this.router.navigate(['/create-properties-management']);
   }
 
-  // Eliminar una propiedad por su ID
   deleteProperty(propertyId: number): void {
     if (confirm('¿Estás seguro de que deseas eliminar esta propiedad?')) {
-      this.http.delete(`https://inmoshare-api-production.up.railway.app/api/v1/properties/${propertyId}`)
-        .subscribe(
-          () => {
-            console.log(`Propiedad con ID ${propertyId} eliminada correctamente.`);
-            // Eliminar la propiedad localmente de la lista para actualizar la vista
-            this.userProperties = this.userProperties.filter(property => property.id !== propertyId);
-          },
-          error => {
-            console.error(`Error al eliminar la propiedad con ID ${propertyId}`, error);
-          }
-        );
+      this.propertiesService.deleteProperty(propertyId)
+        .then(() => {
+          console.log(`Propiedad con ID ${propertyId} eliminada correctamente.`);
+          this.userProperties = this.userProperties.filter(property => property.id !== propertyId);
+        })
+        .catch(error => {
+          console.error(`Error al eliminar la propiedad con ID ${propertyId}:`, error);
+        });
     }
   }
 
@@ -87,3 +90,4 @@ export class MyPropertiesComponent {
 
 
 }
+
