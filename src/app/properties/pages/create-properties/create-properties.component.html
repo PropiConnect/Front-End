@@ -1,61 +1,61 @@
 <app-toolbar></app-toolbar>
-<h1 class="section-name">Property Registration</h1>
+<h1 class="section-name">{{ 'newproperty.tittle' | translate }}</h1>
 <div class="container">
   <div class="form-layout">
     <div class="form-column">
       <div class="form-group">
-        <label for="city">Ciudad</label>
+        <label for="city">{{ 'newproperty.city' | translate }}</label>
         <input type="text" id="city" [(ngModel)]="property.city" name="city" required>
       </div>
 
       <div class="form-group">
-        <label for="type">Tipo de Operación</label>
+        <label for="type">{{ 'newproperty.optype' | translate }}</label>
         <select id="type" [(ngModel)]="property.type" name="type" required>
-          <option value="Venta">Venta</option>
-          <option value="Alquiler">Alquiler</option>
+          <option value="Venta">{{ 'newproperty.op1' | translate }}</option>
+          <option value="Alquiler">{{ 'newproperty.op2' | translate }}</option>
         </select>
       </div>
 
       <div class="form-group">
-        <label for="address">Dirección</label>
+        <label for="address">{{ 'newproperty.address' | translate }}</label>
         <input type="text" id="address" [(ngModel)]="property.address" name="address" required>
       </div>
     </div>
 
     <div class="form-column">
       <div class="form-group">
-        <label for="description">Descripción</label>
+        <label for="description">{{ 'newproperty.description' | translate }}</label>
         <textarea id="description" [(ngModel)]="property.description" name="description" required></textarea>
       </div>
 
       <div class="form-group">
-        <label for="propertyType">Tipo de Propiedad</label>
+        <label for="propertyType">{{ 'newproperty.ptype.title' | translate }}</label>
         <select id="propertyType" [(ngModel)]="property.propertyType" name="propertyType" required>
-          <option value="House">Casa</option>
-          <option value="Apartment">Departamento</option>
-          <option value="Office">Oficina</option>
+          <option value="House">{{ 'newproperty.ptype.o1' | translate }}</option>
+          <option value="Apartment">{{ 'newproperty.ptype.o2' | translate }}</option>
+          <option value="Office">{{ 'newproperty.ptype.o3' | translate }}</option>
         </select>
       </div>
 
       <div class="form-group">
-        <label for="rentalType">Tipo de Alquiler</label>
+        <label for="rentalType">{{ 'newproperty.rentype.title' | translate }}</label>
         <select id="rentalType" [(ngModel)]="property.rentalType" name="rentalType" required>
-          <option value="Mensual">Mensual</option>
-          <option value="Anual">Anual</option>
+          <option value="Mensual">{{ 'newproperty.rentype.o1' | translate }}</option>
+          <option value="Anual">{{ 'newproperty.rentype.o2' | translate }}</option>
         </select>
       </div>
 
       <div class="form-group">
-        <label for="initialPrice">Precio Inicial</label>
+        <label for="initialPrice">{{ 'newproperty.price' | translate }}l</label>
         <input type="number" id="initialPrice" [(ngModel)]="property.initialPrice" name="initialPrice" required>
       </div>
 
       <div class="form-group">
-        <label for="image">URL de la Imagen</label>
+        <label for="image">{{ 'newproperty.url' | translate }}</label>
         <input type="text" id="image" [(ngModel)]="property.image" name="image" required>
       </div>
     </div>
   </div>
 
-  <button type="button" class="submit-btn" (click)="registerProperty()">Registrar</button>
+  <button type="button" class="submit-btn" (click)="registerProperty()">{{ 'newproperty.a' | translate }}</button>
 </div>

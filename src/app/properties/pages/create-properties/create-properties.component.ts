@@ -6,6 +6,7 @@ import { Properties } from "../../model/properties.entity";
 import { MatTableDataSource } from "@angular/material/table";
 import {ToolbarComponent} from "../../../public/pages/toolbar/toolbar.component";
 import {Router} from "@angular/router";
+import {TranslateModule} from "@ngx-translate/core";
 
 @Component({
   selector: 'app-create-properties',
@@ -14,6 +15,7 @@ import {Router} from "@angular/router";
     FormsModule,
     HttpClientModule,
     ToolbarComponent,
+    TranslateModule,
     // Usa HttpClientModule para habilitar HttpClient
   ],
   providers: [

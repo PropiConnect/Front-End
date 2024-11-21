@@ -57,5 +57,28 @@
     "address": "Dirección",
     "savebtn": "Guardar",
     "paymentbtn": "Historial de Pagos"
+  },
+  "newproperty": {
+    "tittle": "Registro de inmueble",
+    "city": "Ciudad",
+    "description": "Descripcion",
+    "optype": "Tipo de Operación",
+    "op1": "Venta",
+    "op2": "Alquiler",
+    "address": "Dirección",
+    "ptype":{
+     "title" :"Tipo de Propiedad",
+      "o1": "Casa",
+      "o2": "Departamento",
+      "o3": "Oficina"
+    },
+    "rentype":{
+      "title":"Tipo de Alquiler",
+      "o1": "Mensual",
+      "o2": "Anual"
+    },
+    "price": "Precio Inicial",
+    "url": "URL de la Imagen",
+    "a": "Registrar"
   }
 }

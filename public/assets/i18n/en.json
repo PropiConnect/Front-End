@@ -58,5 +58,28 @@
     "savebtn": "Save",
     "paymentbtn": "Payment History"
 
+  },
+  "newproperty": {
+    "tittle": "Property Registration",
+    "city": "City",
+    "description": "Description",
+    "optype": "Operation Type",
+    "op1": "Sale",
+    "op2": "Rent",
+    "address": "Address",
+    "ptype": {
+      "title": "Property Type",
+      "o1": "House",
+      "o2": "Apartment",
+      "o3": "Office"
+    },
+    "rentype": {
+      "title": "Rent Type",
+      "o1": "Monthly",
+      "o2": "Annual"
+    },
+    "price": "Initial Price",
+    "url": "Image URL",
+    "a": "Register"
   }
 }
