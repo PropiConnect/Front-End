@@ -8,23 +8,23 @@
         <img [src]="property.image" alt="Property image" class="property-image">
         <div class="property-details">
           <h2 class="property-type">{{ property.type }}</h2>
-          <p><strong>Precio:</strong> s/ {{ property.initialPrice }}</p>
-          <p><strong>Tipo de vivienda:</strong> {{ property.propertyType === 'House' ? 'Casa' : property.propertyType }}</p>
-          <p><strong>Dirección:</strong> {{ property.address }}</p>
-          <p><strong>Descripción:</strong> {{ property.description }}</p>
+          <p><strong>{{ 'properties.price' | translate }}:</strong> s/ {{ property.initialPrice }}</p>
+          <p><strong>{{ 'properties.ptype' | translate }}:</strong> {{ property.propertyType === 'House' ? 'Casa' : property.propertyType }}</p>
+          <p><strong>{{ 'properties.address' | translate }}:</strong> {{ property.address }}</p>
+          <p><strong>{{ 'properties.description' | translate }}:</strong> {{ property.description }}</p>
         </div>
       </div>
 
       <div class="buttons">
-        <button mat-raised-button color="primary" (click)="editProperty(property.Id)" class="edit-btn"> <mat-icon>edit</mat-icon> Edit</button>
+        <button mat-raised-button color="primary" (click)="editProperty(property.Id)" class="edit-btn"> <mat-icon>edit</mat-icon> {{ 'properties.editbtn' | translate }}</button>
         <button mat-raised-button color="warn" (click)="deleteProperty(property.Id)" class="delete-property-btn">
-          <mat-icon>delete</mat-icon> Delete
+          <mat-icon>delete</mat-icon> {{ 'properties.deletebtn' | translate }}
         </button>
       </div>
     </mat-card>
   </div>
 
   <div class="buttons-new">
-    <button mat-raised-button color="primary" (click)="addProperty()" class="add-property-btn">Añadir propiedad</button>
+    <button mat-raised-button color="primary" (click)="addProperty()" class="add-property-btn">{{ 'properties.addbtn' | translate }}</button>
   </div>
 </div>

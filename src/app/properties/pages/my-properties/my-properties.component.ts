@@ -12,7 +12,8 @@ import {MatGridListModule} from "@angular/material/grid-list";
 import {ReactiveFormsModule} from "@angular/forms";
 import {MatDialogModule} from "@angular/material/dialog";
 import {ToolbarComponent} from "../../../public/pages/toolbar/toolbar.component";
-import {PropertiesService} from "../../services/properties.service"; // Asegúrate de ajustar la ruta según tu estructura de proyecto
+import {PropertiesService} from "../../services/properties.service";
+import {TranslateModule} from "@ngx-translate/core"; // Asegúrate de ajustar la ruta según tu estructura de proyecto
 
 @Component({
   selector: 'app-my-properties',
@@ -29,6 +30,7 @@ import {PropertiesService} from "../../services/properties.service"; // Asegúra
     ReactiveFormsModule,
     MatDialogModule,
     ToolbarComponent,
+    TranslateModule,
     // Asegurarse de importar MatDialogModule aquí
   ],
   templateUrl: './my-properties.component.html',

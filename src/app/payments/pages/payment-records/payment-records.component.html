@@ -1,33 +1,33 @@
 <app-toolbar></app-toolbar>
-<h1 class="section-name">Payments Received</h1>
+<h1 class="section-name"> {{ 'payments.payment' | translate }}</h1>
 <div class="container">
   <div *ngFor="let payment of dataSource.data" >
     <mat-card class="payment-record-cards">
-      <mat-card-title> Card Owner: {{ payment.participants[0].name || 'Unknown' }}</mat-card-title>
+      <mat-card-title> {{ 'payments.cowner' | translate }}: {{ payment.participants[0].name || 'Unknown' }}</mat-card-title>
       <mat-card-subtitle>ID: {{ payment.id }}</mat-card-subtitle>
     </mat-card>
     <table mat-table [dataSource]="payment.participants || []" class="mat-elevation-z8">
       <!-- Name Column -->
       <ng-container matColumnDef="card-number">
-        <th mat-header-cell *matHeaderCellDef> Name </th>
+        <th mat-header-cell *matHeaderCellDef>  {{ 'payments.name' | translate }} </th>
         <td mat-cell *matCellDef="let participant"> {{ payment.cardNumber }} </td>
       </ng-container>
 
       <!-- Email Column -->
       <ng-container matColumnDef="email">
-        <th mat-header-cell *matHeaderCellDef> Email </th>
+        <th mat-header-cell *matHeaderCellDef>  {{ 'payments.email' | translate }} </th>
         <td mat-cell *matCellDef="let participant"> {{ participant.email }} </td>
       </ng-container>
 
       <!-- Payment Percentage Column -->
       <ng-container matColumnDef="paymentPercentage">
-        <th mat-header-cell *matHeaderCellDef> Payment Percentage </th>
+        <th mat-header-cell *matHeaderCellDef> P {{ 'payments.ppercentage' | translate }} </th>
         <td mat-cell *matCellDef="let participant"> {{ participant.paymentPercentage }}% </td>
       </ng-container>
 
       <!-- Ownership Percentage Column -->
       <ng-container matColumnDef="ownershipPercentage">
-        <th mat-header-cell *matHeaderCellDef> Ownership Percentage </th>
+        <th mat-header-cell *matHeaderCellDef>  {{ 'payments.ownpercentage' | translate }}</th>
         <td mat-cell *matCellDef="let participant"> {{ participant.ownershipPercentage }}% </td>
       </ng-container>
 

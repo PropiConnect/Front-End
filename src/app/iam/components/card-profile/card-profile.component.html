@@ -1,38 +1,38 @@
 <app-toolbar></app-toolbar>
-<h1 class="section-name">My Account</h1>
+<h1 class="section-name"> {{ 'myaccount.tittle' | translate }} </h1>
 <div *ngIf="user; else loading" class="profile-page">
   <div class="profile-content">
     <div class="profile-details">
       <div class="profile-item">
-        <label>Name</label>
+        <label>{{ 'myaccount.name' | translate }}</label>
         <input type="text" [(ngModel)]="user.name" [disabled]="!isEditing" />
         <button mat-icon-button (click)="toggleEdit()">
           <mat-icon>{{ isEditing ? 'done' : 'edit' }}</mat-icon>
         </button>
       </div>
       <div class="profile-item">
-        <label>Username</label>
+        <label>{{ 'myaccount.username' | translate }}</label>
         <input type="text" [(ngModel)]="user.username" [disabled]="!isEditing" />
         <button mat-icon-button (click)="toggleEdit()">
           <mat-icon>{{ isEditing ? 'done' : 'edit' }}</mat-icon>
         </button>
       </div>
       <div class="profile-item">
-        <label>Phone</label>
+        <label>{{ 'myaccount.phone' | translate }}</label>
         <input type="text" [(ngModel)]="user.phone" [disabled]="!isEditing" />
         <button mat-icon-button (click)="toggleEdit()">
           <mat-icon>{{ isEditing ? 'done' : 'edit' }}</mat-icon>
         </button>
       </div>
       <div class="profile-item">
-        <label>Email</label>
+        <label>{{ 'myaccount.email' | translate }}</label>
         <input type="email" [(ngModel)]="user.email" [disabled]="!isEditing" />
         <button mat-icon-button (click)="toggleEdit()">
           <mat-icon>{{ isEditing? 'done' : 'edit' }}</mat-icon>
         </button>
       </div>
       <div class="profile-item">
-        <label>Password</label>
+        <label>{{ 'myaccount.password' | translate }}</label>
         <input type="password" [(ngModel)]="user.password" [disabled]="!isEditing" />
         <button mat-icon-button (click)="toggleEdit()">
           <mat-icon>{{ isEditing ? 'done' : 'edit' }}</mat-icon>
@@ -43,7 +43,7 @@
         <input type="text" [(ngModel)]="user.userType" disabled />
       </div>
       <div class="profile-item">
-        <label>Address</label>
+        <label>{{ 'myaccount.address' | translate }}</label>
         <input type="text" [(ngModel)]="user.address" [disabled]="!isEditing" />
         <button mat-icon-button (click)="toggleEdit()">
           <mat-icon>{{ isEditing ? 'done' : 'edit' }}</mat-icon>
@@ -51,8 +51,8 @@
       </div>
     </div>
     <div class="profile-actions">
-      <button mat-raised-button color="primary" (click)="saveChanges()">Save</button>
-      <button mat-raised-button color="primary">Payment History</button>
+      <button mat-raised-button color="primary" (click)="saveChanges()">{{ 'myaccount.savebtn' | translate }}</button>
+      <button mat-raised-button color="primary">{{ 'myaccount.paymentbtn' | translate }}</button>
     </div>
   </div>
 </div>

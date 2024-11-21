@@ -26,15 +26,37 @@
     "payment": "Payment Records"
   },
   "home": {
-
+    "prp": "Properties",
+    "buybtn": "Buy"
   },
   "properties": {
-
+    "price": "Price",
+    "ptype": "PropertyType",
+    "address": "Address",
+    "description": "Description",
+    "title": "My Properties",
+    "editbtn": "Edit",
+    "deletebtn": "Delete",
+    "addbtn": "Add Property"
   },
   "payments": {
-
+    "payment": "Payments Received",
+    "cowner": "Card Owner",
+    "name": "Name",
+    "email": "Email",
+    "ppercentage": "Payment Percentage",
+    "ownpercentage": "Owner Percentage"
   },
   "myaccount": {
+    "title": "My Account",
+    "name": "Name",
+    "username": "Username",
+    "phone": "Phone",
+    "email": "Email",
+    "password": "Password",
+    "address": "Address",
+    "savebtn": "Save",
+    "paymentbtn": "Payment History"
 
   }
 }

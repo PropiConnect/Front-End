@@ -1,5 +1,5 @@
 <app-toolbar></app-toolbar>
-<h1 class="section-name">Properties</h1>
+<h1 class="section-name">{{ 'home.prp' | translate }}</h1>
 <div class="container">
   <!-- Contenedor para las propiedades del usuario -->
   <div class="property-info-section" *ngFor="let property of userProperties">
@@ -17,7 +17,7 @@
 
       <!-- Botón para redirigir al pago -->
       <div class="property-actions">
-        <button mat-raised-button color="primary" (click)="buyProperty(property.Id)">Buy</button>
+        <button mat-raised-button color="primary" (click)="buyProperty(property.Id)">{{ 'home.buybtn' | translate }}</button>
       </div>
     </mat-card>
   </div>

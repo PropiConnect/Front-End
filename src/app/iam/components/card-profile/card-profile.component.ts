@@ -7,11 +7,13 @@ import {ToolbarComponent} from "../../../public/pages/toolbar/toolbar.component"
 import {MatIcon} from "@angular/material/icon";
 import {MatButton, MatIconButton} from "@angular/material/button";
 import {FormsModule} from "@angular/forms";
+import {MatCardTitle} from "@angular/material/card";
+import {TranslateModule} from "@ngx-translate/core";
 
 @Component({
   selector: 'app-card-profile',
   standalone: true,
-  imports: [NgIf, ToolbarComponent, MatIcon, MatIconButton, MatButton, FormsModule],
+  imports: [NgIf, ToolbarComponent, MatIcon, MatIconButton, MatButton, FormsModule, MatCardTitle, TranslateModule],
   templateUrl: './card-profile.component.html',
   styleUrls: ['./card-profile.component.css']
 })

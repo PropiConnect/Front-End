@@ -1,22 +1,61 @@
 {
   "login": {
-
+    "welcome": "Bienvenido",
+    "login": "Iniciar sesión",
+    "email": "Correo electrónico",
+    "erequired": "El correo electrónico es obligatorio",
+    "password": "Contraseña",
+    "prequired": "La contraseña es obligatoria",
+    "reminder": "¿No tienes una cuenta? ",
+    "register": "Crea una"
+  },
+  "signup": {
+    "title": "Registrarse",
+    "name": "Nombre",
+    "username": "Nombre de usuario",
+    "phone": "Teléfono",
+    "email": "Correo electrónico",
+    "password": "Contraseña",
+    "address": "Dirección",
+    "subtype": "Tipo de suscripción",
+    "register": "Registrar"
   },
   "toolbar": {
     "thome": "Inicio",
     "prop": "Mis Propiedades",
-    "payment": "Registro de pagos"
+    "payment": "Historial de Pagos"
   },
   "home": {
-
+    "prp": "Propiedades",
+    "buybtn": "Comprar"
   },
   "properties": {
-
+    "price": "Precio",
+    "ptype": "Tipo de Propiedad",
+    "address": "Dirección",
+    "description": "Descripción",
+    "title": "Mis Propiedades",
+    "editbtn": "Editar",
+    "deletebtn": "Eliminar",
+    "addbtn": "Añadir Propiedad"
   },
   "payments": {
-
+    "payment": "Pagos Recibidos",
+    "cowner": "Titular de la Tarjeta",
+    "name": "Nombre",
+    "email": "Correo electrónico",
+    "ppercentage": "Porcentaje del Pago",
+    "ownpercentage": "Porcentaje del Propietario"
   },
   "myaccount": {
-
+    "title": "Mi Cuenta",
+    "name": "Nombre",
+    "username": "Nombre de usuario",
+    "phone": "Teléfono",
+    "email": "Correo electrónico",
+    "password": "Contraseña",
+    "address": "Dirección",
+    "savebtn": "Guardar",
+    "paymentbtn": "Historial de Pagos"
   }
 }
