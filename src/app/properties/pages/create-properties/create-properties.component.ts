@@ -5,6 +5,7 @@ import { PropertiesService } from "../../services/properties.service";
 import { Properties } from "../../model/properties.entity";
 import { MatTableDataSource } from "@angular/material/table";
 import {ToolbarComponent} from "../../../public/pages/toolbar/toolbar.component";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-create-properties',
@@ -39,7 +40,7 @@ export class CreatePropertiesComponent implements OnInit, AfterViewInit {
   protected editMode: boolean = false;
   protected dataSource: MatTableDataSource<any> = new MatTableDataSource<any>();
 
-  constructor(private propertyService: PropertiesService) {
+  constructor(private propertyService: PropertiesService, private router: Router) {
     this.property = new Properties({});
   }
 
@@ -70,6 +71,7 @@ export class CreatePropertiesComponent implements OnInit, AfterViewInit {
         console.log('Propiedad registrada correctamente:', newProperty);
         alert('Propiedad registrada exitosamente');
         this.property = new Properties({}); // Limpiar el formulario después de registrar
+        this.router.navigate(['/properties']);
       })
       .catch(error => {
         console.error('Error al registrar la propiedad:', error);

@@ -1,5 +1,5 @@
 export class Properties {
-  "id": number
+  "Id": number
   "ownerName": string
   "ownerId": number
   "city": string
@@ -12,7 +12,7 @@ export class Properties {
   "initialPrice": number
 
   constructor(properties: {
-    id?: number;
+    Id?: number;
     ownerName?: string;
     ownerId?: number;
     city?: string;
@@ -24,7 +24,7 @@ export class Properties {
     image?: string;
     initialPrice?: number;
   }) {
-    this.id = properties.id || 0;
+    this.Id = properties.Id || 0;
     this.ownerName = properties.ownerName || '';
     this.ownerId = properties.ownerId || 0;
     this.city = properties.city || '';
