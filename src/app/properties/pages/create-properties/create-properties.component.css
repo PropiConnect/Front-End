@@ -69,3 +69,12 @@ button:hover {
   margin-top: 40px;
   width: 100%;
 }
+
+.section-name{
+  font-size: 44px;
+  font-weight: bold;
+  text-align: start;
+  color: #3f51b5;
+  margin:20px 40px;
+  display: inline-block;
+}

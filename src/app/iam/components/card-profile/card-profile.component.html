@@ -19,7 +19,10 @@
       </div>
       <div class="profile-item">
         <label>Email</label>
-        <input type="email" [(ngModel)]="user.email" disabled />
+        <input type="email" [(ngModel)]="user.email" [disabled]="!isEditing" />
+        <button mat-icon-button (click)="toggleEdit()">
+          <mat-icon>{{ isEditing? 'done' : 'edit' }}</mat-icon>
+        </button>
       </div>
       <div class="profile-item">
         <label>Password</label>

@@ -4,13 +4,16 @@ import { HttpClientModule } from '@angular/common/http';
 import { PropertiesService } from "../../services/properties.service";
 import { Properties } from "../../model/properties.entity";
 import { MatTableDataSource } from "@angular/material/table";
+import {ToolbarComponent} from "../../../public/pages/toolbar/toolbar.component";
 
 @Component({
   selector: 'app-create-properties',
   standalone: true, // Este componente es standalone
   imports: [
     FormsModule,
-    HttpClientModule // Usa HttpClientModule para habilitar HttpClient
+    HttpClientModule,
+    ToolbarComponent,
+    // Usa HttpClientModule para habilitar HttpClient
   ],
   providers: [
     PropertiesService // Asegúrate de registrar el servicio si es necesario
