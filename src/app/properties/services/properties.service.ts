@@ -39,32 +39,34 @@ export class PropertiesService {
   }
 
   getPropertiesByOwnerId(ownerId: number): Promise<Properties[]> {
-    const apiUrl = `https://inmoshare-api-production.up.railway.app/api/v1/properties/owner/${ownerId}`;
+    const apiUrl = `${this.apiUrl}/owner/${ownerId}`;
     return fetch(apiUrl)
       .then(response => {
         if (!response.ok) {
-          throw new Error('Error al obtener las propiedades del propietario');
+          throw new Error('Error al obtener las propiedades');
         }
         return response.json();
-      });
-  }
-
-  deleteProperty(propertyId: number): Promise<void> {
-
-    return fetch(this.apiUrl, {
-      method: 'DELETE'
-    })
-      .then(response => {
-        if (!response.ok) {
-          throw new Error('Error al eliminar la propiedad');
-        }
       })
-      .catch(error => {
-        console.error(`Error al intentar eliminar la propiedad con ID ${propertyId}:`, error);
-        throw error;
+      .then(data => {
+        console.log('Datos recibidos desde el backend:', data); // Verifica si el ID aparece correctamente
+        return data;
       });
   }
 
 
+  deletePropertyById(id: number): Promise<void> {
+    console.log(`Intentando eliminar propiedad con ID: ${id}`); // Depuración
+    const url = `${this.apiUrl}/${id}`;
+    return fetch(url, {
+      method: 'DELETE',
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    }).then(response => {
+      if (!response.ok) {
+        throw new Error('Error al eliminar la propiedad');
+      }
+    });
+  }
 
 }
