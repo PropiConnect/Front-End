@@ -11,7 +11,8 @@ import { MatIconModule } from "@angular/material/icon";
 import { MatGridListModule } from "@angular/material/grid-list";
 import { ReactiveFormsModule } from "@angular/forms";
 import { MatDialogModule } from "@angular/material/dialog";
-import { ToolbarComponent } from "../toolbar/toolbar.component"; // Ajusta la ruta si es necesario
+import { ToolbarComponent } from "../toolbar/toolbar.component";
+import {TranslateModule, TranslateService} from "@ngx-translate/core"; // Ajusta la ruta si es necesario
 
 @Component({
   selector: 'app-my-properties',
@@ -28,6 +29,8 @@ import { ToolbarComponent } from "../toolbar/toolbar.component"; // Ajusta la ru
     ReactiveFormsModule,
     MatDialogModule,
     ToolbarComponent,
+    TranslateModule,
+
     RouterLink,
   ],
   templateUrl: 'home.component.html',

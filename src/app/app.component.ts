@@ -1,5 +1,6 @@
 import {Component} from '@angular/core';
 import {RouterLink, RouterOutlet} from '@angular/router';
+import { LanguageSwitcherComponent } from './public/components/language-switcher/language-switcher.component';
 
 import {RegistrationFormComponent} from "./iam/components/registration-form/registration-form.component";
 import {LoginFormComponent} from "./iam/components/login-form/login-form.component";
@@ -8,11 +9,25 @@ import {MatAnchor, MatButton, MatIconAnchor} from "@angular/material/button";
 import {MatIcon} from "@angular/material/icon";
 import {MatToolbar} from "@angular/material/toolbar";
 import {LoginPageComponent} from "./iam/pages/login-page/login-page.component";
+import {TranslateModule, TranslateService} from "@ngx-translate/core";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, RegistrationFormComponent, LoginFormComponent, PaymentFormComponent, MatButton, MatIconAnchor, MatIcon, MatAnchor, RouterLink, MatToolbar, LoginPageComponent],
+  imports: [RouterOutlet,
+    RegistrationFormComponent,
+    LoginFormComponent,
+    PaymentFormComponent,
+    MatButton,
+    MatIconAnchor,
+    MatIcon,
+    MatAnchor,
+    RouterLink,
+    MatToolbar,
+    LoginPageComponent,
+    TranslateModule,
+    LanguageSwitcherComponent
+  ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'], // Aquí el arreglo con un único elemento
 })
