@@ -5,43 +5,43 @@
     <div class="profile-details">
       <div class="profile-item">
         <label>Name</label>
-        <input type="text" [value]="user.name" disabled />
-        <button mat-icon-button>
-          <mat-icon>edit</mat-icon>
+        <input type="text" [(ngModel)]="user.name" [disabled]="!isEditing" />
+        <button mat-icon-button (click)="toggleEdit()">
+          <mat-icon>{{ isEditing ? 'done' : 'edit' }}</mat-icon>
         </button>
       </div>
       <div class="profile-item">
         <label>Phone</label>
-        <input type="text" [value]="user.phone" disabled />
-        <button mat-icon-button>
-          <mat-icon>edit</mat-icon>
+        <input type="text" [(ngModel)]="user.phone" [disabled]="!isEditing" />
+        <button mat-icon-button (click)="toggleEdit()">
+          <mat-icon>{{ isEditing ? 'done' : 'edit' }}</mat-icon>
         </button>
       </div>
       <div class="profile-item">
         <label>Email</label>
-        <input type="email" [value]="user.email" disabled />
+        <input type="email" [(ngModel)]="user.email" disabled />
       </div>
       <div class="profile-item">
         <label>Password</label>
-        <input type="password" value="********" disabled />
-        <button mat-icon-button>
-          <mat-icon>edit</mat-icon>
+        <input type="password" [(ngModel)]="user.password" [disabled]="!isEditing" />
+        <button mat-icon-button (click)="toggleEdit()">
+          <mat-icon>{{ isEditing ? 'done' : 'edit' }}</mat-icon>
         </button>
       </div>
       <div class="profile-item">
         <label>Plan</label>
-        <input type="email" [value]="user.userType" disabled />
+        <input type="text" [(ngModel)]="user.userType" disabled />
       </div>
       <div class="profile-item">
         <label>Address</label>
-        <input type="text" [value]="user.address" disabled />
-        <button mat-icon-button>
-          <mat-icon>edit</mat-icon>
+        <input type="text" [(ngModel)]="user.address" [disabled]="!isEditing" />
+        <button mat-icon-button (click)="toggleEdit()">
+          <mat-icon>{{ isEditing ? 'done' : 'edit' }}</mat-icon>
         </button>
       </div>
     </div>
     <div class="profile-actions">
-      <button mat-raised-button color="primary">Save</button>
+      <button mat-raised-button color="primary" (click)="saveChanges()">Save</button>
       <button mat-raised-button color="primary">Payment History</button>
     </div>
   </div>

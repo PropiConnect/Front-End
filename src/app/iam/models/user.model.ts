@@ -1,5 +1,6 @@
 export interface User {
-  id?: number;
+  id?: number; // Este es el alias que usarás en tu frontend
+  userId?: number; // Esto refleja el nombre exacto del campo en el backend
   name: string;
   username: string;
   phone: string;
@@ -8,3 +9,4 @@ export interface User {
   address: string;
   userType: string;
 }
+

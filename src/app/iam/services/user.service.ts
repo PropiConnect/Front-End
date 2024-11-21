@@ -63,4 +63,21 @@ export class UserService {
 
   }
 
+  updateUser(userId: number, updatedUser: User): Promise<User> {
+    return fetch(`${this.apiUrl}/${userId}`, {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(updatedUser)
+    })
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Error al actualizar el usuario');
+        }
+        return response.json();
+      });
+  }
+
+
 }
