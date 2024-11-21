@@ -53,6 +53,26 @@ export class PropertiesService {
       });
   }
 
+  getPropertyById(Id: number): Promise<Properties> {
+    const url = `${this.apiUrl}/${Id}`;
+    return fetch(url)
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Error al obtener la propiedad');
+        }
+        return response.json();
+      })
+      .then(data => {
+        console.log('Propiedad obtenida por ID:', data);
+        return data;
+      })
+      .catch(error => {
+        console.error('Error al obtener la propiedad:', error);
+        throw error;
+      });
+  }
+
+
 
   deletePropertyById(id: number): Promise<void> {
     console.log(`Intentando eliminar propiedad con ID: ${id}`); // Depuración
@@ -68,5 +88,38 @@ export class PropertiesService {
       }
     });
   }
+
+  updatePropertyById(id: number, updatedProperty: Properties): Promise<Properties> {
+    console.log(`Actualizando propiedad con ID: ${id}`); // Para depuración
+
+    const url = `${this.apiUrl}/${id}`;
+    const headers = {
+      'Content-Type': 'application/json'
+    };
+
+    return fetch(url, {
+      method: 'PUT',
+      headers,
+      body: JSON.stringify(updatedProperty)
+    })
+      .then(response => {
+        if (!response.ok) {
+          return response.json().then(error => {
+            throw new Error(error.message || 'Error al actualizar la propiedad');
+          });
+        }
+        return response.json();
+      })
+      .then(data => {
+        console.log('Propiedad actualizada con éxito:', data);
+        return data;
+      })
+      .catch(error => {
+        console.error('Error durante la actualización:', error);
+        throw error;
+      });
+  }
+
+
 
 }

@@ -1,1 +1,46 @@
-<p>update-properties works!</p>
+<app-toolbar></app-toolbar>
+<div class="update-property-container">
+  <h1>Edit Property</h1>
+
+  <div *ngIf="property; else loading" class="update-property-content">
+    <div class="property-item">
+      <label>City</label>
+      <input type="text" [(ngModel)]="property.city" [disabled]="!isEditing" />
+    </div>
+
+    <div class="property-item">
+      <label>Address</label>
+      <input type="text" [(ngModel)]="property.address" [disabled]="!isEditing" />
+    </div>
+
+    <div class="property-item">
+      <label>Property Type</label>
+      <input type="text" [(ngModel)]="property.propertyType" [disabled]="!isEditing" />
+    </div>
+
+    <div class="property-item">
+      <label>Description</label>
+      <textarea [(ngModel)]="property.description" [disabled]="!isEditing"></textarea>
+    </div>
+
+    <div class="property-item">
+      <label>Price</label>
+      <input type="number" [(ngModel)]="property.initialPrice" [disabled]="!isEditing" />
+    </div>
+
+    <div class="property-item">
+      <label>Rental Type</label>
+      <input type="text" [(ngModel)]="property.rentalType" [disabled]="!isEditing" />
+    </div>
+
+    <div class="property-actions">
+      <button mat-raised-button color="primary" (click)="saveChanges()" [disabled]="!isEditing">Save</button>
+      <button mat-raised-button color="accent" (click)="toggleEdit()">Edit</button>
+    </div>
+  </div>
+
+  <ng-template #loading>
+    <p>Loading property details...</p>
+  </ng-template>
+</div>
+

@@ -68,8 +68,8 @@ export class MyPropertiesComponent {
   }
 
 
-  editProperty(propertyId: number): void {
-    this.router.navigate(['/properties-managment'], { queryParams: { id: propertyId } });
+  editProperty(Id: number): void {
+    this.router.navigate([`/update-properties-management/${Id}`]);
   }
 
   // Redirigir a la página para añadir una nueva propiedad
@@ -89,7 +89,6 @@ export class MyPropertiesComponent {
         });
     }
   }
-
 
 }
 
