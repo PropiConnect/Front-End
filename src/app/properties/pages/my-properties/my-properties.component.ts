@@ -65,4 +65,25 @@ export class MyPropertiesComponent {
   addProperty(): void {
     this.router.navigate(['/create-properties-management']);
   }
+
+  // Eliminar una propiedad por su ID
+  deleteProperty(propertyId: number): void {
+    if (confirm('¿Estás seguro de que deseas eliminar esta propiedad?')) {
+      this.http.delete(`https://inmoshare-api-production.up.railway.app/api/v1/properties/${propertyId}`)
+        .subscribe(
+          () => {
+            console.log(`Propiedad con ID ${propertyId} eliminada correctamente.`);
+            // Eliminar la propiedad localmente de la lista para actualizar la vista
+            this.userProperties = this.userProperties.filter(property => property.id !== propertyId);
+          },
+          error => {
+            console.error(`Error al eliminar la propiedad con ID ${propertyId}`, error);
+          }
+        );
+    }
+  }
+
+
+
+
 }
