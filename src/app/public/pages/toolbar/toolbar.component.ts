@@ -15,7 +15,7 @@ import {UserService} from "../../../iam/services/user.service";
   standalone: true,
   imports: [RouterOutlet, RegistrationFormComponent, LoginFormComponent, PaymentFormComponent, MatButton, MatIconAnchor, MatIcon, MatAnchor, RouterLink, MatToolbar, LoginPageComponent],
   templateUrl: './toolbar.component.html',
-  styleUrl: './toolbar.component.css'
+  styleUrls: ['./toolbar.component.css']
 })
 export class ToolbarComponent {
   constructor(private router: Router, private userService: UserService) {}

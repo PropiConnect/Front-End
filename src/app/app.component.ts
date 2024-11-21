@@ -14,7 +14,7 @@ import {LoginPageComponent} from "./iam/pages/login-page/login-page.component";
   standalone: true,
   imports: [RouterOutlet, RegistrationFormComponent, LoginFormComponent, PaymentFormComponent, MatButton, MatIconAnchor, MatIcon, MatAnchor, RouterLink, MatToolbar, LoginPageComponent],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css'], // Aquí el arreglo con un único elemento
 })
 export class AppComponent {
   title = 'PropiConect-FrontEnd';
