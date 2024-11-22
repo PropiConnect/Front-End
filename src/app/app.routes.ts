@@ -8,6 +8,7 @@ import {MyPropertiesComponent} from "./properties/pages/my-properties/my-propert
 import {PropertiesManagementComponent} from "./properties/pages/properties-management/properties-management.component"
 import {CreatePropertiesComponent} from "./properties/pages/create-properties/create-properties.component";
 import {HomeComponent} from "./public/pages/home/home.component";
+import {UpdatePropertiesComponent} from "./properties/pages/update-properties/update-properties.component";
 
 export const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
@@ -19,5 +20,6 @@ export const routes: Routes = [
   { path: 'owner/payments', component: PaymentRecordsComponent },
   { path: 'properties', component: MyPropertiesComponent },
   { path: 'all-properties', component: PropertiesManagementComponent},
-  { path: 'create-properties-management', component: CreatePropertiesComponent }
+  { path: 'create-properties-management', component: CreatePropertiesComponent },
+  { path: 'update-properties-management/:Id', component: UpdatePropertiesComponent }
 ];

@@ -59,7 +59,6 @@ export class PropertiesManagementComponent implements OnInit {
         console.error('Error fetching property details', error);
       }
     );
-
   }
 
 
